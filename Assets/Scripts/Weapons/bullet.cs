@@ -17,7 +17,6 @@ public class bullet : MonoBehaviour
         if (enemy != null && collision.CompareTag("Enemy"))
         {
             enemy.TakeDamage(damage);
-            scoreManager.UpdateScore(scoreManager.score);
             Destroy(gameObject);
         }        
     }

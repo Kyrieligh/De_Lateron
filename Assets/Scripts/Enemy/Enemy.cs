@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
     public int health, maxHealth = 20;
+    [Header("Score Settings")] public int scoreValue;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,6 +22,10 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            if (ScoreManager.instance !=null)
+            {
+                ScoreManager.instance.UpdateScore(scoreValue);
+            }
             Destroy(gameObject);
         }
     }
