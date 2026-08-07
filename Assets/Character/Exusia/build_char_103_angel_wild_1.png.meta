@@ -1,0 +1,1846 @@
+fileFormatVersion: 2
+guid: 4a80883f6e8112646a87cd7d71592852
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1537557296794492150
+    second: build_char_103_angel_wild_1_0
+  - first:
+      213: 8783038222978718198
+    second: build_char_103_angel_wild_1_1
+  - first:
+      213: -175250385826597128
+    second: build_char_103_angel_wild_1_2
+  - first:
+      213: 6568200792554206918
+    second: build_char_103_angel_wild_1_3
+  - first:
+      213: 4366897780472529812
+    second: build_char_103_angel_wild_1_4
+  - first:
+      213: 237066492350698586
+    second: build_char_103_angel_wild_1_5
+  - first:
+      213: 3572415092795986222
+    second: build_char_103_angel_wild_1_6
+  - first:
+      213: 4469366664289493801
+    second: build_char_103_angel_wild_1_7
+  - first:
+      213: -108632665323299633
+    second: build_char_103_angel_wild_1_8
+  - first:
+      213: -6487170148503811613
+    second: build_char_103_angel_wild_1_9
+  - first:
+      213: 6995963622267615645
+    second: build_char_103_angel_wild_1_10
+  - first:
+      213: 1983410619078930639
+    second: build_char_103_angel_wild_1_11
+  - first:
+      213: -7646957990501328964
+    second: build_char_103_angel_wild_1_12
+  - first:
+      213: 6338348309917321155
+    second: build_char_103_angel_wild_1_13
+  - first:
+      213: -13371366602604173
+    second: build_char_103_angel_wild_1_14
+  - first:
+      213: -7983884755841141617
+    second: build_char_103_angel_wild_1_15
+  - first:
+      213: -3875289918145816268
+    second: build_char_103_angel_wild_1_16
+  - first:
+      213: 2435154074067295314
+    second: build_char_103_angel_wild_1_17
+  - first:
+      213: -893788204949493121
+    second: build_char_103_angel_wild_1_18
+  - first:
+      213: -8503714903566656605
+    second: build_char_103_angel_wild_1_19
+  - first:
+      213: 4982984010549210484
+    second: build_char_103_angel_wild_1_20
+  - first:
+      213: -3319260000104421267
+    second: build_char_103_angel_wild_1_21
+  - first:
+      213: -2639889117356896119
+    second: build_char_103_angel_wild_1_22
+  - first:
+      213: 177172063772272774
+    second: build_char_103_angel_wild_1_23
+  - first:
+      213: 4649786097704240221
+    second: build_char_103_angel_wild_1_24
+  - first:
+      213: -5537449955537109996
+    second: build_char_103_angel_wild_1_25
+  - first:
+      213: 2927577418630365215
+    second: build_char_103_angel_wild_1_26
+  - first:
+      213: 507150551850635938
+    second: build_char_103_angel_wild_1_27
+  - first:
+      213: -8116828115207554631
+    second: build_char_103_angel_wild_1_28
+  - first:
+      213: 1351628578239635811
+    second: build_char_103_angel_wild_1_29
+  - first:
+      213: -1464170198289970502
+    second: build_char_103_angel_wild_1_30
+  - first:
+      213: -7810708108196393640
+    second: build_char_103_angel_wild_1_31
+  - first:
+      213: -5238941337934876404
+    second: build_char_103_angel_wild_1_32
+  - first:
+      213: -2858393520916192808
+    second: build_char_103_angel_wild_1_33
+  - first:
+      213: 5898418860518406526
+    second: build_char_103_angel_wild_1_34
+  - first:
+      213: -8281584039103406908
+    second: build_char_103_angel_wild_1_35
+  - first:
+      213: -1881042489605541693
+    second: build_char_103_angel_wild_1_36
+  - first:
+      213: 7017494620772035879
+    second: build_char_103_angel_wild_1_37
+  - first:
+      213: -5737507287964722375
+    second: build_char_103_angel_wild_1_38
+  - first:
+      213: -2357545834919210676
+    second: build_char_103_angel_wild_1_39
+  - first:
+      213: 1330669781583512614
+    second: build_char_103_angel_wild_1_40
+  - first:
+      213: -5946742439312896126
+    second: build_char_103_angel_wild_1_41
+  - first:
+      213: -2544725797548544907
+    second: build_char_103_angel_wild_1_42
+  - first:
+      213: -6929986316093469612
+    second: build_char_103_angel_wild_1_43
+  - first:
+      213: -4421469061533588777
+    second: build_char_103_angel_wild_1_44
+  - first:
+      213: 4452640305292290105
+    second: build_char_103_angel_wild_1_45
+  - first:
+      213: 2521207151344286698
+    second: build_char_103_angel_wild_1_46
+  - first:
+      213: 783859715023704639
+    second: build_char_103_angel_wild_1_47
+  - first:
+      213: 2004851519595479069
+    second: build_char_103_angel_wild_1_48
+  - first:
+      213: 6809497352571064813
+    second: build_char_103_angel_wild_1_49
+  - first:
+      213: 7811450966849263164
+    second: build_char_103_angel_wild_1_50
+  - first:
+      213: -7107398654755555927
+    second: build_char_103_angel_wild_1_51
+  - first:
+      213: 2249186479476549618
+    second: build_char_103_angel_wild_1_52
+  - first:
+      213: -7461096944010104516
+    second: build_char_103_angel_wild_1_53
+  - first:
+      213: -5986600093637920043
+    second: build_char_103_angel_wild_1_54
+  - first:
+      213: -4956346649025985657
+    second: build_char_103_angel_wild_1_55
+  - first:
+      213: 3532807854035050328
+    second: build_char_103_angel_wild_1_56
+  - first:
+      213: 5780495940749895630
+    second: build_char_103_angel_wild_1_57
+  - first:
+      213: -5138705979449954992
+    second: build_char_103_angel_wild_1_58
+  - first:
+      213: -105979883347187930
+    second: build_char_103_angel_wild_1_59
+  - first:
+      213: -3648908325211001398
+    second: build_char_103_angel_wild_1_60
+  - first:
+      213: 1296788738380898621
+    second: build_char_103_angel_wild_1_61
+  - first:
+      213: 947420787118091791
+    second: build_char_103_angel_wild_1_62
+  - first:
+      213: -4397660028757516408
+    second: build_char_103_angel_wild_1_63
+  - first:
+      213: 5332052686988511294
+    second: build_char_103_angel_wild_1_64
+  - first:
+      213: -7869555012237134933
+    second: build_char_103_angel_wild_1_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 496
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0321cee8cf79aae0800000000000000
+      internalID: -1537557296794492150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 495
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f91351babe93e970800000000000000
+      internalID: 8783038222978718198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 443
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f63e0ed3b2619df0800000000000000
+      internalID: -175250385826597128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 392
+        width: 23
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6f1ad22dfe62b50800000000000000
+      internalID: 6568200792554206918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 426
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493c18ff4665a9c30800000000000000
+      internalID: 4366897780472529812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 414
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5416b008ba3a4300800000000000000
+      internalID: 237066492350698586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 402
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2159547994c39130800000000000000
+      internalID: 3572415092795986222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_7
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 392
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923a2fb2d41660e30800000000000000
+      internalID: 4469366664289493801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 338
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc966c9a2f0e7ef0800000000000000
+      internalID: -108632665323299633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_9
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 382
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e989e4de11f8f5a0800000000000000
+      internalID: -6487170148503811613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 348
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99f0d629d7a61160800000000000000
+      internalID: 6995963622267615645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 26
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0ffe1137d768b10800000000000000
+      internalID: 1983410619078930639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 313
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb755d3193c80e590800000000000000
+      internalID: -7646957990501328964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 264
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7c153b43656f750800000000000000
+      internalID: 6338348309917321155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 49
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3718d7b10de70dff0800000000000000
+      internalID: -13371366602604173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 204
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84be607d1b833190800000000000000
+      internalID: -7983884755841141617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_16
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 203
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43914430a54383ac0800000000000000
+      internalID: -3875289918145816268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_17
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 198
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c50267ab76bc120800000000000000
+      internalID: 2435154074067295314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 181
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a2d83fc50a893f0800000000000000
+      internalID: -893788204949493121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_19
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 142
+        width: 43
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abd6bd895cbcf980800000000000000
+      internalID: -8503714903566656605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_20
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 143
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47dac3e7e8d172540800000000000000
+      internalID: 4982984010549210484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_21
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 123
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68ec98bd9e9fe1d0800000000000000
+      internalID: -3319260000104421267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 137
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980d581a5da3d5bd0800000000000000
+      internalID: -2639889117356896119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 73
+        width: 59
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688e445ad01757200800000000000000
+      internalID: 177172063772272774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_24
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 71
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54063bf1db578040800000000000000
+      internalID: 4649786097704240221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_25
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 103
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c35b6aa960723b0800000000000000
+      internalID: -5537449955537109996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_26
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 124
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f100be9b628d0a820800000000000000
+      internalID: 2927577418630365215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_27
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 74
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a253ba6db2c90700800000000000000
+      internalID: 507150551850635938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_28
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 75
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9762285db3b5f80800000000000000
+      internalID: -8116828115207554631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_29
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 109
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3616d3ad703f1c210800000000000000
+      internalID: 1351628578239635811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_30
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 109
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba863056f83eabe0800000000000000
+      internalID: -1464170198289970502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 76
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85dc0b6cb5aca9390800000000000000
+      internalID: -7810708108196393640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_32
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 109
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0138493c9a8b47b0800000000000000
+      internalID: -5238941337934876404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_33
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 95
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d12385bc32f458d0800000000000000
+      internalID: -2858393520916192808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_34
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 93
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79f9a5d3b46bd150800000000000000
+      internalID: 5898418860518406526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_35
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 96
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc52b3b137e11d80800000000000000
+      internalID: -8281584039103406908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_36
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 65
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c035a762d135e5e0800000000000000
+      internalID: -1881042489605541693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_37
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 54
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72de4546d26236160800000000000000
+      internalID: 7017494620772035879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_38
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 55
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bd5ac25874060b0800000000000000
+      internalID: -5737507287964722375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_39
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 75
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4150ffcd80584fd0800000000000000
+      internalID: -2357545834919210676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_40
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 63
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624c1acbd1d777210800000000000000
+      internalID: 1330669781583512614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_41
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 63
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fc306324de87da0800000000000000
+      internalID: -5946742439312896126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_42
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 65
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ca852ae515facd0800000000000000
+      internalID: -2544725797548544907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_43
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c4ee2892eb3df90800000000000000
+      internalID: -6929986316093469612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_44
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 55
+        width: 54
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d229e18059c3a2c0800000000000000
+      internalID: -4421469061533588777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_45
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 54
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938a88d34c4facd30800000000000000
+      internalID: 4452640305292290105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_46
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 35
+        width: 42
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebfc05db802df220800000000000000
+      internalID: 2521207151344286698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_47
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 55
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f321abbf144d0ea00800000000000000
+      internalID: 783859715023704639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_48
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 35
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1004ecb5d9a2db10800000000000000
+      internalID: 2004851519595479069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_49
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 35
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de116fe83c1308e50800000000000000
+      internalID: 6809497352571064813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_50
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 49
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c369e6b7449d76c60800000000000000
+      internalID: 7811450966849263164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_51
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5b43284927d5d90800000000000000
+      internalID: -7107398654755555927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_52
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 35
+        width: 52
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7afc6bf27b63f10800000000000000
+      internalID: 2249186479476549618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_53
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 67
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3176892cdbd47890800000000000000
+      internalID: -7461096944010104516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_54
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1
+        width: 49
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da3466eee25beca0800000000000000
+      internalID: -5986600093637920043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_55
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1
+        width: 49
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783cb198bf4873bb0800000000000000
+      internalID: -4956346649025985657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_56
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 35
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f187f860e070130800000000000000
+      internalID: 3532807854035050328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_57
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 31
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec72cf58e62783050800000000000000
+      internalID: 5780495940749895630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_58
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 31
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05da5b14326afa8b0800000000000000
+      internalID: -5138705979449954992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_59
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627e0cb8bdb778ef0800000000000000
+      internalID: -105979883347187930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_60
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 31
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd25d106397c5dc0800000000000000
+      internalID: -3648908325211001398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_61
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 11
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31abe3ac7e1ff110800000000000000
+      internalID: 1296788738380898621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_62
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 11
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0eaefcaf2ae52d00800000000000000
+      internalID: 947420787118091791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_63
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 0
+        width: 58
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f59fee08f58f2c0800000000000000
+      internalID: -4397660028757516408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_64
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 8
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e380e9b1ba14ff940800000000000000
+      internalID: 5332052686988511294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: build_char_103_angel_wild_1_65
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 7
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3f53b3969b9c290800000000000000
+      internalID: -7869555012237134933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      build_char_103_angel_wild_1_0: -1537557296794492150
+      build_char_103_angel_wild_1_1: 8783038222978718198
+      build_char_103_angel_wild_1_10: 6995963622267615645
+      build_char_103_angel_wild_1_11: 1983410619078930639
+      build_char_103_angel_wild_1_12: -7646957990501328964
+      build_char_103_angel_wild_1_13: 6338348309917321155
+      build_char_103_angel_wild_1_14: -13371366602604173
+      build_char_103_angel_wild_1_15: -7983884755841141617
+      build_char_103_angel_wild_1_16: -3875289918145816268
+      build_char_103_angel_wild_1_17: 2435154074067295314
+      build_char_103_angel_wild_1_18: -893788204949493121
+      build_char_103_angel_wild_1_19: -8503714903566656605
+      build_char_103_angel_wild_1_2: -175250385826597128
+      build_char_103_angel_wild_1_20: 4982984010549210484
+      build_char_103_angel_wild_1_21: -3319260000104421267
+      build_char_103_angel_wild_1_22: -2639889117356896119
+      build_char_103_angel_wild_1_23: 177172063772272774
+      build_char_103_angel_wild_1_24: 4649786097704240221
+      build_char_103_angel_wild_1_25: -5537449955537109996
+      build_char_103_angel_wild_1_26: 2927577418630365215
+      build_char_103_angel_wild_1_27: 507150551850635938
+      build_char_103_angel_wild_1_28: -8116828115207554631
+      build_char_103_angel_wild_1_29: 1351628578239635811
+      build_char_103_angel_wild_1_3: 6568200792554206918
+      build_char_103_angel_wild_1_30: -1464170198289970502
+      build_char_103_angel_wild_1_31: -7810708108196393640
+      build_char_103_angel_wild_1_32: -5238941337934876404
+      build_char_103_angel_wild_1_33: -2858393520916192808
+      build_char_103_angel_wild_1_34: 5898418860518406526
+      build_char_103_angel_wild_1_35: -8281584039103406908
+      build_char_103_angel_wild_1_36: -1881042489605541693
+      build_char_103_angel_wild_1_37: 7017494620772035879
+      build_char_103_angel_wild_1_38: -5737507287964722375
+      build_char_103_angel_wild_1_39: -2357545834919210676
+      build_char_103_angel_wild_1_4: 4366897780472529812
+      build_char_103_angel_wild_1_40: 1330669781583512614
+      build_char_103_angel_wild_1_41: -5946742439312896126
+      build_char_103_angel_wild_1_42: -2544725797548544907
+      build_char_103_angel_wild_1_43: -6929986316093469612
+      build_char_103_angel_wild_1_44: -4421469061533588777
+      build_char_103_angel_wild_1_45: 4452640305292290105
+      build_char_103_angel_wild_1_46: 2521207151344286698
+      build_char_103_angel_wild_1_47: 783859715023704639
+      build_char_103_angel_wild_1_48: 2004851519595479069
+      build_char_103_angel_wild_1_49: 6809497352571064813
+      build_char_103_angel_wild_1_5: 237066492350698586
+      build_char_103_angel_wild_1_50: 7811450966849263164
+      build_char_103_angel_wild_1_51: -7107398654755555927
+      build_char_103_angel_wild_1_52: 2249186479476549618
+      build_char_103_angel_wild_1_53: -7461096944010104516
+      build_char_103_angel_wild_1_54: -5986600093637920043
+      build_char_103_angel_wild_1_55: -4956346649025985657
+      build_char_103_angel_wild_1_56: 3532807854035050328
+      build_char_103_angel_wild_1_57: 5780495940749895630
+      build_char_103_angel_wild_1_58: -5138705979449954992
+      build_char_103_angel_wild_1_59: -105979883347187930
+      build_char_103_angel_wild_1_6: 3572415092795986222
+      build_char_103_angel_wild_1_60: -3648908325211001398
+      build_char_103_angel_wild_1_61: 1296788738380898621
+      build_char_103_angel_wild_1_62: 947420787118091791
+      build_char_103_angel_wild_1_63: -4397660028757516408
+      build_char_103_angel_wild_1_64: 5332052686988511294
+      build_char_103_angel_wild_1_65: -7869555012237134933
+      build_char_103_angel_wild_1_7: 4469366664289493801
+      build_char_103_angel_wild_1_8: -108632665323299633
+      build_char_103_angel_wild_1_9: -6487170148503811613
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
