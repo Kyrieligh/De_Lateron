@@ -1,31 +1,31 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Character
 {
     public float moveSpeed = 2f;
     Rigidbody2D rb;
     Transform target;
     Vector2 moveDirection;
-    public int health, maxHealth = 20;
+    //public int currentHealth, maxHealth = 20;
     [Header("Score Settings")] public int scoreValue;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        health = maxHealth;
+        CurrentHealth = MaxHealth;
     }
 
     public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
+        CurrentHealth -= damageAmount;
 
-        if (health <= 0)
+        if (CurrentHealth <= 0)
         {
-            if (ScoreManager.instance !=null)
-            {
-                ScoreManager.instance.UpdateScore(scoreValue);
-            }
+            //if (ScoreManager.instance !=null)
+            //{
+            //    ScoreManager.instance.UpdateScore(scoreValue);
+            //}
             Destroy(gameObject);
         }
     }
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
     {
         if (target)
         {
-            rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+            rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed; 
         }
     }
 }
