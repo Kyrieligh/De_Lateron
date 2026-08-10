@@ -1,68 +1,55 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class GameMechanic : MonoBehaviour
+public class GameMechanic : MonoBehaviour, IMovable
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
 
     [Header("References")]
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private Transform target;
+    [SerializeField] protected Transform target;
+    private Rigidbody2D rb;
 
     [Header("State / Input")]
-    [SerializeField] private Vector2 moveDirection;
-    private Vector2 pointerInput;
-    private Vector2 moveInput;
-    private Animator animator;
+    [SerializeField] protected Vector2 moveDirection;
+    protected Vector2 pointerInput;
+    protected Vector2 moveInput;
+    protected Animator animator;
 
-    // GETTER & SETTER (PROPERTIES
-
-    // 1. Move Speed (Validasi agar Kecepatan Tidak Minus)
-    public float MoveSpeed
+    void Start()
     {
-        get => moveSpeed;
-        set => moveSpeed = Mathf.Max(0f, value); // Memastikan kecepatan tidak negatif
+        rb = GetComponent<Rigidbody2D>(); //Di C# Unity, fungsi GetComponent<T>() sebenarnya adalah singkatan dari this.gameObject.GetComponent<T>().
+        animator = GetComponent<Animator>();
     }
 
-    // 2. Target (Bisa dibaca dan diubah dari script AI / System lain)
-    public Transform Target
+    // Update is called once per frame
+    void Update()
     {
-        get => target;
-        set => target = value;
+        rb.linearVelocity = moveInput * moveSpeed;
+        //weaponParent.PointerPosition = pointerInput;
+        //pointerInput = GetPointerInput();
+
+
     }
 
-    // 3. Move Direction (Arah Gerak Karakter)
-    public Vector2 MoveDirection
+    public void Move(Vector2 direction)
     {
-        get => moveDirection;
-        set => moveDirection = value.normalized; // Menggunakan .normalized agar panjang vector bernilai 1
+        moveInput = direction;
     }
 
-    // 4. Move Input & Pointer Input (Biasanya di-set oleh Input Reader/PlayerController)
-    public Vector2 MoveInput
+    public void OnMoveInput(InputAction.CallbackContext context)
     {
-        get => moveInput;
-        set => moveInput = value;
-    }
+        Move(context.ReadValue<Vector2>());
+        animator.SetBool("isWalking", true);// dari UnityEngine memakai library atau tools "Animator" terus mengambil variable animator.if player press move button then isWalking will be true and play walk 
+        if (context.canceled) //if player release move button then isWalking will be false and play idle animation
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetFloat("LastInputX", moveInput.x);
+            animator.SetFloat("LastInputY", moveInput.y);
+        }
 
-    public Vector2 PointerInput
-    {
-        get => pointerInput;
-        set => pointerInput = value;
-    }
-
-    // 5. Read-Only Components (Hanya Getter agar script luar tidak merusak referensi)
-    public Rigidbody Rb => rb;
-    public Animator Animator => animator;
-
-    // ========================================================
-    // UNITY LIFECYCLE (Menggantikan Constructor)
-    // ========================================================
-
-    private void Awake()
-    {
-        // Ambil komponen secara otomatis jika belum di-assign di Inspector
-        if (rb == null) rb = GetComponent<Rigidbody>();
-        if (animator == null) animator = GetComponent<Animator>();
+        moveInput = context.ReadValue<Vector2>();
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
     }
 }

@@ -13,7 +13,7 @@ public class bullet : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
+        IDamageable enemy = collision.GetComponent<IDamageable>();
         if (enemy != null && collision.CompareTag("Enemy"))
         {
             enemy.TakeDamage(damage);
