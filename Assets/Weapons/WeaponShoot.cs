@@ -7,7 +7,6 @@ public class AimWeapon : MonoBehaviour
     public float bulletSpeed = 20f;
     public Vector3 mousePos; // variable mousePos digunakan untuk menyimpan posisi mouse di world position sehingga karakter dapat menghadap ke arah mouse.
     public Camera cam; // variable cam digunakan untuk mengambil posisi mouse di layar dan mengubahnya menjadi world position sehingga karakter dapat menghadap ke arah mouse.
-    public int damage = 5;
     
     private void Start()
     {

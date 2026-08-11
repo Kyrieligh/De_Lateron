@@ -28,10 +28,10 @@ public class Enemy : Character, IDamageable
 
         if (CurrentHealth <= 0)
         {
-            //if (ScoreManager.instance !=null)
-            //{
-            //    ScoreManager.instance.UpdateScore(scoreValue);
-            //}
+            if (ScoreManager.instance != null)
+            {
+                ScoreManager.instance.UpdateScore(scoreValue);
+            }
             Destroy(gameObject);
         }
     }
