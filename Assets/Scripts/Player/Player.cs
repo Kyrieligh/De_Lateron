@@ -26,9 +26,10 @@ public class Player : Character, IDamageable
     {   
         rb = GetComponent<Rigidbody2D>(); //Di C# Unity, fungsi GetComponent<T>() sebenarnya adalah singkatan dari this.gameObject.GetComponent<T>().
         animator = GetComponent<Animator>();
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
         slider.maxValue = maxHealth;
-        slider.value = currentHealth;
+        slider.value = CurrentHealth;
+        HealthItem.OnHealthCollect += Heal;
     }
 
     // Update is called once per frame
@@ -39,6 +40,12 @@ public class Player : Character, IDamageable
         //pointerInput = GetPointerInput();
 
 
+    }
+
+    //to avoid Memory leak
+    private void OnDestroy()
+    {
+        HealthItem.OnHealthCollect -= Heal;
     }
 
     public void Move(Vector2 direction)
@@ -67,12 +74,20 @@ public class Player : Character, IDamageable
     public void TakeDamage(int damageAmount)
     {
         CurrentHealth -= damageAmount;
-        slider.value = currentHealth;
+        slider.value = CurrentHealth;
         if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
         }
     }
 
-    
+    void Heal(int amount)
+    {
+        // Menggunakan property CurrentHealth otomatis dibatasi batas atas di class Character
+        CurrentHealth += amount;
+        
+        if (slider != null) slider.value = CurrentHealth;
+    }
+
+
 }

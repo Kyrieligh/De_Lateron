@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Character, IDamageable
@@ -9,16 +11,22 @@ public class Enemy : Character, IDamageable
     //[System.Serializable] public enum Enemylist { RangeEnemy, MeleeEnemy };
     //public Enemylist type;
 
+
     //public Player player;
     [Header("Targeting")]
     [SerializeField] protected Transform target;// varible target use for enemy for find player
 
     [Header("Score Settings")] public int scoreValue;
 
+    //Drop item
+    [Header("Drop Item")]
+    public List<PickUpItem> dropTable = new List<PickUpItem>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+
         CurrentHealth = MaxHealth;
     }
 
@@ -32,12 +40,35 @@ public class Enemy : Character, IDamageable
             {
                 ScoreManager.instance.UpdateScore(scoreValue);
             }
-            Destroy(gameObject);
+            Die();
         }
     }
 
-    
+    void Die()
+    {
+        foreach(PickUpItem item in dropTable)
+        {
+            //chance to get item
+            float chance = Random.Range(0f, 100f); 
+            if ( chance <= item.dropChance)
+            {
 
+                InstantiateItem(item.itemPrefab);
+            }
+            //break;
+        }
+
+        Destroy(gameObject);
+    }
+
+    void InstantiateItem(GameObject loot)
+    {
+        if(loot)
+        {
+            //GameObject droppedItem = 
+              Instantiate(loot, transform.position, Quaternion.identity);
+        }
+    }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

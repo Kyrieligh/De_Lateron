@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] public float moveSpeed = 5f;
-    private Vector2 pointerInput, moveInput; // variable moveInput digunakan untuk menyimpan input dari player yang berupa Vector2 sehingga karakter dapat bergerak ke arah input yang diberikan.
+    //private Vector2 pointerInput, moveInput; // variable moveInput digunakan untuk menyimpan input dari player yang berupa Vector2 sehingga karakter dapat bergerak ke arah input yang diberikan.
     private Animator animator;
     //[SerializeField] InputActionReference pointerPosition;
     //private WeaponParent weaponParent;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
+        ///rb.linearVelocity = moveInput * moveSpeed;
         //weaponParent.PointerPosition = pointerInput;
         //pointerInput = GetPointerInput();
 

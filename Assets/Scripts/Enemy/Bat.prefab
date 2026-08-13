@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 602670708895872708}
   - component: {fileID: 6970849476913987395}
   - component: {fileID: 7421872549702103183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5043310633756402101}
   - component: {fileID: 5393100071905213511}
   - component: {fileID: 2763620359639390948}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -199,6 +199,9 @@ MonoBehaviour:
   damageInterval: 1
   target: {fileID: 0}
   scoreValue: 5
+  dropTable:
+  - itemPrefab: {fileID: 4135188354310013929, guid: 67be4ad1139965e45a7976f029f7e287, type: 3}
+    dropChance: 100
 --- !u!61 &5043310633756402101
 BoxCollider2D:
   m_ObjectHideFlags: 0
