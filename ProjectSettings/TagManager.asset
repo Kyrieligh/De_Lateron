@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Score
   - Item
+  - GameOver
   layers:
   - Default
   - TransparentFX

@@ -2,14 +2,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player : Character, IDamageable
 {
+    private GameOver kockMati;
+
     [Header("Health Bar")]
     public Slider slider;
     [Header("Player Specific Attributes")]
     [SerializeField] private int weaponDamage = 50;
 
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+    [SerializeField] private TrailRenderer trailRenderer;
 
     public string changeName
     {
@@ -30,6 +41,8 @@ public class Player : Character, IDamageable
         slider.maxValue = maxHealth;
         slider.value = CurrentHealth;
         HealthItem.OnHealthCollect += Heal;
+
+        kockMati = Object.FindAnyObjectByType<GameOver>(); // Find the GameOver script in the scene
     }
 
     // Update is called once per frame
@@ -38,8 +51,25 @@ public class Player : Character, IDamageable
         rb.linearVelocity = moveInput * moveSpeed;
         //weaponParent.PointerPosition = pointerInput;
         //pointerInput = GetPointerInput();
+        if (isDashing)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
 
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return;
+        }
     }
 
     //to avoid Memory leak
@@ -51,6 +81,22 @@ public class Player : Character, IDamageable
     public void Move(Vector2 direction)
     {
         moveInput = direction;
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.linearVelocity += new Vector2(transform.localScale.x * dashingPower, 0f);
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        trailRenderer.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -77,8 +123,18 @@ public class Player : Character, IDamageable
         slider.value = CurrentHealth;
         if (CurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            die();
         }
+    }
+
+    void die()
+    {
+        if (kockMati != null)
+        {
+            kockMati.TriggerGameOver();
+        }
+        Destroy(gameObject);
+        
     }
 
     void Heal(int amount)
