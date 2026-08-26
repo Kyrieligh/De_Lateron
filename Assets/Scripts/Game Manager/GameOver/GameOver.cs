@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOverScreen;
+    public GameObject gameOverScreen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameOverScreen.SetActive(false);    
+            
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1f; //Time.timeScale = 0f; cause make game load
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //why this code is long ? cause this code just use for current scene 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0); //why this code is long ? cause this code just use for current scene 
     }
 
     public void mainMenu()

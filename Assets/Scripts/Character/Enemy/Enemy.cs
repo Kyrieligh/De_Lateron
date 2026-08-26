@@ -24,11 +24,8 @@ public class Enemy : Character, IDamageable
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-        if (target != null)
-        { 
-            target = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+    { 
+        target = GameObject.FindGameObjectWithTag("Player").transform;   
 
         CurrentHealth = MaxHealth;
     }

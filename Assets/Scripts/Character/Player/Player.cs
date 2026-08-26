@@ -4,10 +4,11 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEditor.ShaderGraph.Internal;
 
 public class Player : Character, IDamageable
 {
-    private GameOver kockMati;
+    public GameOver kockMati;
 
     [Header("Health Bar")]
     public Slider slider;
@@ -16,8 +17,8 @@ public class Player : Character, IDamageable
 
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPower = 24f;
-    private float dashingTime = 0.2f;
+    [SerializeField] private float dashingPower = 24f;
+    [SerializeField] private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
     [SerializeField] private TrailRenderer trailRenderer;
@@ -42,26 +43,28 @@ public class Player : Character, IDamageable
         slider.value = CurrentHealth;
         HealthItem.OnHealthCollect += Heal;
 
-        kockMati = Object.FindAnyObjectByType<GameOver>(); // Find the GameOver script in the scene
+        //kockMati = Object.FindAnyObjectByType<GameOver>(); // Find the GameOver script in the scene
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDashing) return;
         rb.linearVelocity = moveInput * moveSpeed;
         //weaponParent.PointerPosition = pointerInput;
         //pointerInput = GetPointerInput();
-        if (isDashing)
-        {
-            return;
-        }
+        
 
-        if (Input.GetKeyDown(KeyCode.LeftAlt) && canDash)
+
+
+    }
+
+    public void onDashInput(InputAction.CallbackContext context)
+    {
+        if (context.performed && canDash)
         {
             StartCoroutine(Dash());
         }
-
-
     }
 
     private void FixedUpdate()
@@ -85,15 +88,41 @@ public class Player : Character, IDamageable
 
     private IEnumerator Dash()
     {
-        canDash = false;
+        canDash = false;        
         isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.linearVelocity += new Vector2(transform.localScale.x * dashingPower, 0f);
-        trailRenderer.emitting = true;
+
+        //enable ignore collision while dash pass through enemy
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+
+        // Ambil arah dari tombol WASD yang sedang ditekan
+        Vector2 dashDirection = moveInput.normalized;
+
+        // Jika Player sedang diam (tidak tekan WASD), gunakan arah hadap X
+        if (dashDirection == Vector2.zero)
+        {
+            // Cek apakah karakter sedang hadap kiri (scale negatif atau flipX)
+            float facingDirection = transform.localScale.x >= 0 ? 1f : -1f;
+            dashDirection = new Vector2(facingDirection, 0f);
+        }
+
+        // memberikan kecepatan dash ke arah yang ditentukan
+        rb.linearVelocity = dashDirection * dashingPower;
+
+        if (trailRenderer != null)
+        {
+            trailRenderer.emitting = true;
+        }
+
         yield return new WaitForSeconds(dashingTime);
-        trailRenderer.emitting = false;
-        rb.gravityScale = originalGravity;
+
+        //disable ignore collision while dash pass through enemy
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+
+        if (trailRenderer != null)
+        {
+            trailRenderer.emitting = false;
+        }
+
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
@@ -129,10 +158,8 @@ public class Player : Character, IDamageable
 
     void die()
     {
-        if (kockMati != null)
-        {
             kockMati.TriggerGameOver();
-        }
+        
         Destroy(gameObject);
         
     }

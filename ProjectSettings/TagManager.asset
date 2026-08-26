@@ -8,11 +8,12 @@ TagManager:
   - Score
   - Item
   - GameOver
+  - Audio
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Enemy
