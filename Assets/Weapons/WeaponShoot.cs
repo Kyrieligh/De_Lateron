@@ -4,7 +4,7 @@ public class AimWeapon : MonoBehaviour
 {
     public GameObject Bullet; //object bullet yang akan di spwan
     public Transform firePoint; //yang mana akan menjadi titik spawn bullet
-    public float bulletSpeed = 20f;
+    public float bulletSpeed = 3f;
     public Vector3 mousePos; // variable mousePos digunakan untuk menyimpan posisi mouse di world position sehingga karakter dapat menghadap ke arah mouse.
     public Camera cam; // variable cam digunakan untuk mengambil posisi mouse di layar dan mengubahnya menjadi world position sehingga karakter dapat menghadap ke arah mouse.
     
@@ -32,7 +32,7 @@ public class AimWeapon : MonoBehaviour
 
 
 
-    void Shoot() //spawn bullet
+    void Shoot() //spawn bullet n shoot
     { 
         //the function instantiate is for spawn object (bullet) in unity
         GameObject bullet = Instantiate(Bullet, firePoint.position, firePoint.rotation);
