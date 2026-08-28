@@ -183,10 +183,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1069808826685769722, guid: ed259961961850a45956c8c07bfb688b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4944244131355058883, guid: ed259961961850a45956c8c07bfb688b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 854033238}
   m_SourcePrefab: {fileID: 100100000, guid: ed259961961850a45956c8c07bfb688b, type: 3}
 --- !u!1 &233733563
 GameObject:
@@ -938,6 +942,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818228237}
   m_CullTransparentMesh: 1
+--- !u!1 &854033233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4944244131355058883, guid: ed259961961850a45956c8c07bfb688b, type: 3}
+  m_PrefabInstance: {fileID: 5541787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &854033238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854033233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6a1026f5d448f43ab65cc5c56abd25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemy
+  characterName: Bat
+  maxHealth: 100
+  currentHealth: 30
+  attackDamage: 3
+  moveSpeed: 5
+  moveDirection: {x: 0, y: 0}
+  damageInterval: 1
+  target: {fileID: 451224504}
+  scoreValue: 3
+  dropTable:
+  - itemPrefab: {fileID: 4135188354310013929, guid: 67be4ad1139965e45a7976f029f7e287, type: 3}
+    dropChance: 48.4
 --- !u!1 &900642949
 GameObject:
   m_ObjectHideFlags: 0

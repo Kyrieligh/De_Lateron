@@ -76,6 +76,6 @@ public class RangedEnemy : Enemy
             rb.linearVelocity = firePoint.right * bulletSpeed;
         }
 
-        Destroy(bullet, 3f);
+        Destroy(bullet, 2.1f);
     }
 }

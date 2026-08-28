@@ -148,6 +148,7 @@ public class Player : Character, IDamageable
     //public int currentHealth;
     public void TakeDamage(int damageAmount)
     {
+        Debug.Log("ittai yooooo");
         CurrentHealth -= damageAmount;
         slider.value = CurrentHealth;
         if (CurrentHealth <= 0)
