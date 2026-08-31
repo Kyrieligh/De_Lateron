@@ -50,7 +50,6 @@ MonoBehaviour:
   bulletSpeed: 20
   mousePos: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
-  damage: 5
 --- !u!1 &795186082455295902
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,8 +174,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 469495371804604948}
   - {fileID: 8743526407109873423}
+  - {fileID: 469495371804604948}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5184022306850466682

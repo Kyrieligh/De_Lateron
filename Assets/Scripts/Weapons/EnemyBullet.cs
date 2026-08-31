@@ -43,9 +43,9 @@ public class EnemyBullet : Bullet
             Destroy(gameObject);
         }
         // 3. Hancur jika menabrak rintangan atau tembok
-        else if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            Destroy(gameObject);
-        }
+        //    else if (collision.gameObject.CompareTag("Obstacle"))
+        //    {
+        //        Destroy(gameObject);
+        //    }
     }
 }

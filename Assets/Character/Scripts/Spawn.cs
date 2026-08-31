@@ -5,21 +5,38 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemyGameObject;
+    private float spawnInterval = 3.5f;
 
-    [SerializeField]
-    private float SpawnInterval = 3.5f;
-    
-    // Start is called before the first frame update
+    [Header("Enemy List")]
+    public List<GameObject> EnemyRespawn = new List<GameObject>();
+
     void Start()
     {
-        StartCoroutine(spawnEnemy(SpawnInterval, enemyGameObject));
+        StartCoroutine(SpawnEnemyRoutine());
     }
 
-    private IEnumerator spawnEnemy(float interval, GameObject enemy)
+    private IEnumerator SpawnEnemyRoutine()
     {
-        yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-5f, 5), Random.Range(-6f, 6f), 0), Quaternion.identity);
-        StartCoroutine(spawnEnemy(interval, enemy));
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+
+            if (EnemyRespawn.Count > 0)
+            {
+                int randomIndex = Random.Range(0, EnemyRespawn.Count);
+                GameObject selectedEnemy = EnemyRespawn[randomIndex];
+
+                if (selectedEnemy != null)
+                {
+                    Vector3 spawnPosition = new Vector3(
+                        Random.Range(-5f, 5f),
+                        Random.Range(-6f, 6f),
+                        0f
+                    );
+
+                    Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
+                }
+            }
+        }
     }
 }
