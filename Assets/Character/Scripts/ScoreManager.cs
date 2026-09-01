@@ -4,8 +4,8 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
 
-    public int score;
-    public TMP_Text scoreText;
+    public int Poin;
+    public TMP_Text pointText;
     public static ScoreManager instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +19,8 @@ public class ScoreManager : MonoBehaviour
         
     }
 
+    public int CurrentPoint => Poin;
+
     private void Awake()
     {
         if (instance == null)
@@ -27,9 +29,9 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void UpdateScore(int points)
+    public void UpdatePoint(int points)
     {
-        score += points;
-        scoreText.text = "Score : " + score;
+        Poin += points;
+        pointText.text = "Poin : " + Poin;
     }
 }

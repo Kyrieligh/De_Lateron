@@ -69,6 +69,12 @@ public class Character : MonoBehaviour
         set => attackDamage = Mathf.Max(0, value);
     }
 
+    public float MoveSpeed
+    {
+        get => moveSpeed;
+        set => moveSpeed = value;
+    }
+
     //protected virtual void Awake()
     //{
     //    currentHealth = maxHealth;

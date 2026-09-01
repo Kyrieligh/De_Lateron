@@ -16,7 +16,8 @@ public class Enemy : Character, IDamageable
     [Header("Targeting")]
     [SerializeField] protected Transform target;// varible target use for enemy for find player
 
-    [Header("Score Settings")] public int scoreValue;
+    [Header("Poin Settings")] 
+    public int scoreValue;
 
     //Drop item
     [Header("Drop Item")]
@@ -38,7 +39,7 @@ public class Enemy : Character, IDamageable
         {
             if (ScoreManager.instance != null)
             {
-                ScoreManager.instance.UpdateScore(scoreValue);
+                ScoreManager.instance.UpdatePoint(scoreValue);
             }
             Die();
         }

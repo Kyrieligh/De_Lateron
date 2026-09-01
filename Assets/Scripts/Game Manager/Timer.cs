@@ -5,12 +5,16 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
+    public StatUpgrade statUpgrade;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -19,9 +23,11 @@ public class Timer : MonoBehaviour
         {
             remainingTime -= Time.deltaTime;
         }
-        else if (remainingTime < 0)
+        else if (remainingTime <= 0)
         {
             remainingTime = 0;
+            TimeOut();
+
         }
 
         //membagi waktu menjadi detik dan menit
@@ -31,4 +37,10 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60); //(mod / modulus adalah sisa)Mengambil sisa detik setelah dibagi 60 (misalnya: 125 (mod 60) = 5sec).
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+    public void TimeOut()
+    {
+            statUpgrade.TriggerUpdateStat();
+    }
+
 }

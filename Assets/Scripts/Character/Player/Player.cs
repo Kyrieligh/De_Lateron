@@ -9,6 +9,10 @@ using UnityEditor.ShaderGraph.Internal;
 public class Player : Character, IDamageable
 {
     public GameOver kockMati;
+    // im using "new" for i can modify this variable in StatUpgrade.cs otherwise its onlly update PLayer 
+    //public new float moveSpeed = 6.9f; 
+    //public new int maxHealth = 100;
+    //public new int attackDamage = 15;
 
     [Header("Health Bar")]
     public Slider slider;
