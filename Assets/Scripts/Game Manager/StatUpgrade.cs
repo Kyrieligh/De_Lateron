@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StatUpgrade : MonoBehaviour
@@ -27,23 +28,43 @@ public class StatUpgrade : MonoBehaviour
     [SerializeField] private TMP_Text currentPoint;
     [SerializeField] private TMP_Text pointText;
 
+    [Header("Timer Reference")]
+    [SerializeField] private Timer gameTimer;
+
     private ScoreManager poinScore;
     public GameObject displayUpgradeStat;
     private Button buttonComponent;
     private Player playerStat;
     private int currentCost;
+    private bool isUpgradeStatOpen = false;
     
     void Awake()
     {
         buttonComponent = GetComponent<Button>();
-        //playerStat = FindFirstObjectByType<Player>();
         currentCost = coast;
+        playerStat = FindAnyObjectByType<Player>();
     }
 
     private void Start()
     {
         
     }
+
+    private void Update()
+    {
+        if ( Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isUpgradeStatOpen == true)
+            { 
+                CloseUpgradeStat();
+            }
+            else
+            {
+                TriggerUpdateStat();
+            }
+        }
+    }
+
     private void OnEnable()
     {
         CurrentPoint();
@@ -90,7 +111,20 @@ public class StatUpgrade : MonoBehaviour
 
     public void TriggerUpdateStat()
     {
-        displayUpgradeStat.SetActive(true); 
+        isUpgradeStatOpen = true;
+        if (displayUpgradeStat != null) displayUpgradeStat.SetActive(true); 
         Time.timeScale = 0f; // Pause the game
+    }
+
+    public void CloseUpgradeStat()
+    {
+        isUpgradeStatOpen = false;
+        if (displayUpgradeStat != null) displayUpgradeStat.SetActive(false);
+        Time.timeScale = 1f;
+        if (gameTimer != null)
+        {
+            gameTimer.ResetTimer();
+        }
+        
     }
 }

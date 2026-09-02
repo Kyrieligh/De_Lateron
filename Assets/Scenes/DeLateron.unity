@@ -617,7 +617,7 @@ MonoBehaviour:
   characterName: Miku
   maxHealth: 100
   currentHealth: 100
-  attackDamage: 20
+  attackDamage: 50
   moveSpeed: 6.9
   moveDirection: {x: 0, y: 0}
   kockMati: {fileID: 1155428721}
@@ -984,13 +984,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8158c4d5424204190d458b60823a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  upgradeType: 0
+  upgradeType: 1
   speedUpgradeAmount: 20
   maxHealtUpgradeAmount: 30
   damageUpgradeAmount: 47
   coast: 20
-  currentPoint: {fileID: 900642950}
+  currentPoint: {fileID: 1791482235}
   pointText: {fileID: 1791482235}
+  gameTimer: {fileID: 1979510196}
   displayUpgradeStat: {fileID: 479940868}
 --- !u!224 &504941252 stripped
 RectTransform:
@@ -1891,7 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c1a92836045a54ab7b9701e287ccf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Poin: 0
+  Poin: 100
   pointText: {fileID: 900642950}
 --- !u!4 &1031334623
 Transform:
@@ -13516,7 +13517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   timerText: {fileID: 1285096430}
-  remainingTime: 5
+  remainingTime: 3
   statUpgrade: {fileID: 479940872}
 --- !u!1 &2007273178
 GameObject:

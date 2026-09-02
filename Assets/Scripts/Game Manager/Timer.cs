@@ -6,16 +6,20 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
     public StatUpgrade statUpgrade;
+    float startTime;
+    private bool isTimeOut = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ResetTimer(remainingTime);   
     }
 
-    
-
+    private void Awake()
+    {
+        startTime = remainingTime;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,9 +27,10 @@ public class Timer : MonoBehaviour
         {
             remainingTime -= Time.deltaTime;
         }
-        else if (remainingTime <= 0)
+        else if (remainingTime <= 0 && !isTimeOut)
         {
             remainingTime = 0;
+            isTimeOut = true;
             TimeOut();
 
         }
@@ -40,7 +45,20 @@ public class Timer : MonoBehaviour
 
     public void TimeOut()
     {
-            statUpgrade.TriggerUpdateStat();
+        statUpgrade.TriggerUpdateStat();
+    }
+
+    public void ResetTimer()
+    {
+        remainingTime = startTime;
+        isTimeOut = false;
+    }
+
+    public void ResetTimer(float newTime)
+    {
+        remainingTime = newTime;
+        startTime = newTime;
+        isTimeOut = false;
     }
 
 }
