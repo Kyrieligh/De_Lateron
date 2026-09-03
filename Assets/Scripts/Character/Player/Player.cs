@@ -6,7 +6,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor.ShaderGraph.Internal;
 
-public class Player : Character, IDamageable
+public class Player : StatCharacter, IDamageable
 {
     public GameOver kockMati;
     // im using "new" for i can modify this variable in StatUpgrade.cs otherwise its onlly update PLayer 
@@ -17,7 +17,7 @@ public class Player : Character, IDamageable
     [Header("Health Bar")]
     public Slider slider;
     [Header("Player Specific Attributes")]
-    [SerializeField] private int weaponDamage = 50;
+    //[SerializeField] private int weaponDamage = 50;
 
     private bool canDash = true;
     private bool isDashing;
@@ -27,16 +27,28 @@ public class Player : Character, IDamageable
 
     [SerializeField] private TrailRenderer trailRenderer;
 
+    public static Player Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
     public string changeName
     {
         get => characterName;
         set => characterName = value;
     }
-    public int WeaponDamage
-    {
-        get => weaponDamage;
-        set => weaponDamage = value;
-    }
+    //public int WeaponDamage
+    //{
+    //    get => weaponDamage;
+    //    set => weaponDamage = value;
+    //}
 
     void Start()
     {   
@@ -171,11 +183,21 @@ public class Player : Character, IDamageable
 
     void Heal(int amount)
     {
-        // Menggunakan property CurrentHealth otomatis dibatasi batas atas di class Character
+        // Menggunakan property CurrentHealth otomatis dibatasi batas atas di class StatCharacter
         CurrentHealth += amount;
         
         if (slider != null) slider.value = CurrentHealth;
     }
 
+    public void IncreaseMaxHealth(int amount)
+    {
+        MaxHealth += amount;
+
+        if  (slider != null) // slider != null berarti slider sudah terisi di inspector
+        {
+            slider.maxValue = MaxHealth;
+            
+        }
+    }
 
 }

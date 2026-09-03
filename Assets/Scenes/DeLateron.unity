@@ -622,7 +622,6 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0}
   kockMati: {fileID: 1155428721}
   slider: {fileID: 1855480168}
-  weaponDamage: 50
   dashingPower: 8
   dashingTime: 0.2
   trailRenderer: {fileID: 451224509}
@@ -984,14 +983,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8158c4d5424204190d458b60823a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  upgradeType: 1
   speedUpgradeAmount: 20
   maxHealtUpgradeAmount: 30
   damageUpgradeAmount: 47
-  coast: 20
+  healthCost: 20
+  speedCost: 20
+  damageCost: 20
   currentPoint: {fileID: 1791482235}
   pointText: {fileID: 1791482235}
+  upgradeHealth: {fileID: 1308837594}
+  upgradeDamage: {fileID: 1174629327}
+  upgradeSpeed: {fileID: 1760788895}
   gameTimer: {fileID: 1979510196}
+  playerStat: {fileID: 451224499}
   displayUpgradeStat: {fileID: 479940868}
 --- !u!224 &504941252 stripped
 RectTransform:
@@ -1378,7 +1382,7 @@ GameObject:
   - component: {fileID: 900642951}
   - component: {fileID: 900642950}
   m_Layer: 5
-  m_Name: Poin
+  m_Name: Point
   m_TagString: Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2262,6 +2266,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2060847298266217203, guid: 6ceb48a00a64216438ae844ad88228e5, type: 3}
   m_PrefabInstance: {fileID: 1058419482}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1174629327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7834537562968486187, guid: 6ceb48a00a64216438ae844ad88228e5, type: 3}
+  m_PrefabInstance: {fileID: 1058419482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1257864405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,6 +2556,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2060847298266217203, guid: 6ceb48a00a64216438ae844ad88228e5, type: 3}
   m_PrefabInstance: {fileID: 300542207}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1308837594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7834537562968486187, guid: 6ceb48a00a64216438ae844ad88228e5, type: 3}
+  m_PrefabInstance: {fileID: 300542207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1336068012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 427837548474858376, guid: d378d20372985e64f863424825e7dfd0, type: 3}
@@ -2873,7 +2899,7 @@ GameObject:
   - component: {fileID: 1499801098}
   - component: {fileID: 1499801099}
   m_Layer: 5
-  m_Name: Right Side
+  m_Name: Right Side (Slider)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3217,6 +3243,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760788895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7834537562968486187, guid: 6ceb48a00a64216438ae844ad88228e5, type: 3}
+  m_PrefabInstance: {fileID: 8892466711380143089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1791482233
 GameObject:
   m_ObjectHideFlags: 0

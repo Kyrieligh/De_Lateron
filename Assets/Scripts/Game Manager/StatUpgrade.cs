@@ -6,48 +6,51 @@ using UnityEngine.UI;
 
 public class StatUpgrade : MonoBehaviour
 {
-    public enum UpgradeType
-    {
-        MoveSpeed,
-        MaxHealth,
-        Damage
-    }
-
-    [Header("Upgrade Type")]
-    [SerializeField] private UpgradeType upgradeType;
 
     [Header("Upgrade Stats")]
-    [SerializeField] private int speedUpgradeAmount = 20;
-    [SerializeField] private int maxHealtUpgradeAmount = 30;
-    [SerializeField] private int damageUpgradeAmount = 47;
+    [SerializeField] private float speedUpgradeAmount = 1.7f;
+    [SerializeField] private int maxHealtUpgradeAmount = 15;
+    [SerializeField] private int damageUpgradeAmount = 7;
 
     [Header("Coast ")]
-    [SerializeField] private int coast= 20;
+    [SerializeField] private int healthCost = 20;
+    [SerializeField] private int  speedCost = 20;
+    [SerializeField] private int damageCost = 20;
 
     [Header("UI Poin")]
     [SerializeField] private TMP_Text currentPoint;
     [SerializeField] private TMP_Text pointText;
 
+    [Header("Upgrade Button")]
+    [SerializeField] private Button upgradeHealth;
+    [SerializeField] private Button upgradeDamage;
+    [SerializeField] private Button upgradeSpeed;
+
     [Header("Timer Reference")]
     [SerializeField] private Timer gameTimer;
+    
+    [Header("Player Reference")]
+    [SerializeField] private Player playerStat;
 
     private ScoreManager poinScore;
     public GameObject displayUpgradeStat;
     private Button buttonComponent;
-    private Player playerStat;
     private int currentCost;
     private bool isUpgradeStatOpen = false;
     
     void Awake()
     {
-        buttonComponent = GetComponent<Button>();
-        currentCost = coast;
-        playerStat = FindAnyObjectByType<Player>();
+       if (playerStat == null)
+        {
+            playerStat = FindAnyObjectByType<Player>();
+        }
     }
 
     private void Start()
     {
-        
+        if (upgradeHealth != null) upgradeHealth.onClick.AddListener(BuyHealth);
+        if (upgradeDamage != null) upgradeDamage.onClick.AddListener(BuyDamage);
+        if (upgradeSpeed != null) upgradeSpeed.onClick.AddListener(BuySpeed);
     }
 
     private void Update()
@@ -70,26 +73,47 @@ public class StatUpgrade : MonoBehaviour
         CurrentPoint();
     }
 
-    public void UpgradeStat()
+    public void BuyHealth()
     {
         if (playerStat == null || ScoreManager.instance == null) return;
-        if (ScoreManager.instance.CurrentPoint < currentCost) return;
-        
-        ScoreManager.instance.UpdatePoint(-currentCost);
-        switch (upgradeType)
+
+        if(ScoreManager.instance.CurrentPoint >= healthCost)
         {
-            case UpgradeType.MoveSpeed:
-                playerStat.MoveSpeed += speedUpgradeAmount;
-                break;
-            case UpgradeType.MaxHealth:
-                playerStat.MaxHealth += maxHealtUpgradeAmount;
-                break;
-            case UpgradeType.Damage:
-                playerStat.AttackDamage += damageUpgradeAmount;
-                break;
+            ScoreManager.instance.UpdatePoint(-healthCost);
+            playerStat.MaxHealth += maxHealtUpgradeAmount;
+            UpdateCurrentPointUI();
         }
-        UpdatePointUI();
-        CurrentPoint();
+    }
+
+    public void BuyDamage()
+    {
+        if (playerStat == null || ScoreManager.instance == null) return;
+        
+        if (ScoreManager.instance.CurrentPoint >= damageCost)
+        {
+            ScoreManager.instance.UpdatePoint(-damageCost);
+            playerStat.AttackDamage += damageUpgradeAmount;
+            UpdateCurrentPointUI();
+        }
+    }
+
+    public void BuySpeed()
+    {
+        if (playerStat == null || ScoreManager.instance == null) return;
+
+        if(ScoreManager.instance.CurrentPoint >= speedCost)
+        {
+            ScoreManager.instance.UpdatePoint(-speedCost);
+            playerStat.MoveSpeed += speedUpgradeAmount;
+        }
+    }
+
+    public void UpdateCurrentPointUI()
+    {
+        if (ScoreManager.instance != null && pointText != null)
+        {
+            pointText.text = "Current Poin : " + ScoreManager.instance.CurrentPoint;
+        }
     }
 
     public void CurrentPoint()

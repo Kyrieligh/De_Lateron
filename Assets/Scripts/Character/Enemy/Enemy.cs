@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Character, IDamageable
+public class Enemy : StatCharacter, IDamageable
 {
     //  variabel untuk mengatur kecepatan damage
     public float damageInterval = 1.0f; // Damage masuk setiap 1 detik

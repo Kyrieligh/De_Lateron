@@ -19,7 +19,7 @@ public class AimWeapon : MonoBehaviour
 
         mousePos.z = 0;
 
-        Vector3 lookDir = mousePos - transform.position; // rotasi character berdasarkan arah moouse
+        Vector3 lookDir = mousePos - transform.position; // rotasi StatCharacter berdasarkan arah moouse
         float rotz = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotz - 90f); //Quaternion adalah representasi yang digunakan untuk rotasi dalam 3D space
 
@@ -36,7 +36,13 @@ public class AimWeapon : MonoBehaviour
     { 
         //the function instantiate is for spawn object (bullet) in unity
         GameObject bullet = Instantiate(Bullet, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+		PlayerBullet pBullet = bullet.GetComponent<PlayerBullet>();
+		if (pBullet != null)
+		{
+			// Set damage peluru agar sama dengan AttackDamage milik Player saat ini
+			pBullet.damage = Player.Instance.AttackDamage;
+		}
+		Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
         Destroy(bullet, 3f);
     }

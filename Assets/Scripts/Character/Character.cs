@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class StatCharacter : MonoBehaviour
 {
     
     [Header("Base Attributes")]
@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
     protected Animator animator;
 
     // Default Constructor
-    //public Character()
+    //public StatCharacter()
     //{
     //    characterName = "Unnamed";
     //    maxHealth = 100;
@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
     //}
 
     // Parameterized Constructor
-    //public Character(string characterName, int maxHealth, int attackDamage)
+    //public StatCharacter(string characterName, int maxHealth, int attackDamage)
     //{
     //    this.characterName = characterName;
     //    this.maxHealth = maxHealth;
