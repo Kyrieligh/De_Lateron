@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd0212f37fcf775429c3b60c85202744
+guid: 76cf31c4d83074c41b2affcdfebcf693
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8486116501529631531
-    second: background Unity Main Menu_0
+      213: 3921441551649640537
+    second: Ammo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background Unity Main Menu_0
+      name: Ammo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7999
-        height: 4502
+        width: 641
+        height: 739
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2b114c2ffdb4c570800000000000000
-      internalID: 8486116501529631531
+      spriteID: 95098858052cb6630800000000000000
+      internalID: 3921441551649640537
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background Unity Main Menu_0: 8486116501529631531
+      Ammo_0: 3921441551649640537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

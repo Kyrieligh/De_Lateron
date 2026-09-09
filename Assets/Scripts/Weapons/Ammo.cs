@@ -1,13 +1,10 @@
 using UnityEngine;
 using TMPro;
 
-public class ScoreManager : MonoBehaviour
+public class Ammo : MonoBehaviour
 {
-
-    public int Poin;
-    public TMP_Text pointText;
-    public static ScoreManager instance;
-    public int CurrentPoint => Poin;
+    public TMP_Text ammoText;
+    public static Ammo instance; //digunakan untuk membuat instance dari class Ammo agar dapat diakses dari class lain
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +18,6 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-
     private void Awake()
     {
         if (instance == null)
@@ -30,9 +26,8 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void UpdatePoint(int points)
+    public void UpdateAmmoUI(int currentAmmoUI, int maxAmmoUI)
     {
-        Poin += points;
-        pointText.text = "Poin : " + Poin;
+        ammoText.text = $"{currentAmmoUI} / {maxAmmoUI}" ;
     }
 }

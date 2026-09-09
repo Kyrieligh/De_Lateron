@@ -124,9 +124,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2180408317570386791}
   - component: {fileID: 3313394993472260151}
-  - component: {fileID: 1069808826685769722}
   - component: {fileID: 5043310633756402101}
   - component: {fileID: 2763620359639390948}
+  - component: {fileID: 7452861749269963443}
   m_Layer: 6
   m_Name: Bat
   m_TagString: Enemy
@@ -177,30 +177,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1069808826685769722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4944244131355058883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58becb4fa5d2be4bb544d54f0133686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  characterName: Bat
-  maxHealth: 20
-  currentHealth: 20
-  attackDamage: 15
-  moveSpeed: 2
-  moveDirection: {x: 0, y: 0}
-  damageInterval: 1
-  target: {fileID: 0}
-  scoreValue: 5
-  dropTable:
-  - itemPrefab: {fileID: 4135188354310013929, guid: 67be4ad1139965e45a7976f029f7e287, type: 3}
-    dropChance: 100
 --- !u!61 &5043310633756402101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -269,3 +245,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7452861749269963443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944244131355058883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6a1026f5d448f43ab65cc5c56abd25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemy
+  characterName: Bat
+  maxHealth: 100
+  currentHealth: 10
+  attackDamage: 3
+  moveSpeed: 2.21
+  moveDirection: {x: 0, y: 0}
+  damageInterval: 1
+  target: {fileID: 0}
+  scoreValue: 3
+  dropTable:
+  - itemPrefab: {fileID: 4135188354310013929, guid: 67be4ad1139965e45a7976f029f7e287, type: 3}
+    dropChance: 48.4

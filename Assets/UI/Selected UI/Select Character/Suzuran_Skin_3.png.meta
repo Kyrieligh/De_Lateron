@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd0212f37fcf775429c3b60c85202744
+guid: ba893b9f149b8dc42865a8017976d58d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8486116501529631531
-    second: background Unity Main Menu_0
+      213: 7687009268503981441
+    second: Suzuran_Skin_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background Unity Main Menu_0
+      name: Suzuran_Skin_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 7999
-        height: 4502
+        x: 46
+        y: 30
+        width: 1975
+        height: 1944
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2b114c2ffdb4c570800000000000000
-      internalID: 8486116501529631531
+      spriteID: 18da052c33ebdaa60800000000000000
+      internalID: 7687009268503981441
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background Unity Main Menu_0: 8486116501529631531
+      Suzuran_Skin_3_0: 7687009268503981441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

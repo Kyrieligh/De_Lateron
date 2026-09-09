@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd0212f37fcf775429c3b60c85202744
+guid: 81061a341a021834695a0c200810f685
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8486116501529631531
-    second: background Unity Main Menu_0
+      213: -8124094283831264207
+    second: EXUSIAI_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background Unity Main Menu_0
+      name: EXUSIAI_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7999
-        height: 4502
+        width: 192
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2b114c2ffdb4c570800000000000000
-      internalID: 8486116501529631531
+      spriteID: 13cb47aca4b614f80800000000000000
+      internalID: -8124094283831264207
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background Unity Main Menu_0: 8486116501529631531
+      EXUSIAI_0: -8124094283831264207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

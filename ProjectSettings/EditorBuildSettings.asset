@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main_Menu.unity
     guid: e315f7f3fe5434040bb978723231be15
   - enabled: 1
+    path: Assets/Scenes/Select Character.unity
+    guid: 2ffb1c2c51268164eaa8ad3620413ec9
+  - enabled: 1
     path: Assets/Scenes/DeLateron.unity
     guid: af32ea93f86da074784cd15b2830f0b4
   m_configObjects:

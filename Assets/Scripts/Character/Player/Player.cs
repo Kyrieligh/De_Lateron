@@ -14,6 +14,11 @@ public class Player : StatCharacter, IDamageable
     //public new int maxHealth = 100;
     //public new int attackDamage = 15;
 
+    public CharacterDatabase characterDB;
+    public SpriteRenderer spriteRenderer;
+
+    private int selectedCharacter = 0;
+
     [Header("Health Bar")]
     public Slider slider;
     [Header("Player Specific Attributes")]
@@ -51,7 +56,12 @@ public class Player : StatCharacter, IDamageable
     //}
 
     void Start()
-    {   
+    {
+        if (!PlayerPrefs.HasKey("selectOption"))
+        {
+            Load();
+        }
+
         rb = GetComponent<Rigidbody2D>(); //Di C# Unity, fungsi GetComponent<T>() sebenarnya adalah singkatan dari this.gameObject.GetComponent<T>().
         animator = GetComponent<Animator>();
         CurrentHealth = maxHealth;
@@ -69,11 +79,21 @@ public class Player : StatCharacter, IDamageable
         rb.linearVelocity = moveInput * moveSpeed;
         //weaponParent.PointerPosition = pointerInput;
         //pointerInput = GetPointerInput();
-        
+    }
 
+    private void UpdateCharacter(int selectedCharacter)
+    {
+        Character character = characterDB.GetCharacter(selectedCharacter);
+        spriteRenderer.sprite = character.characterSprite;
+    }
 
+    private void Load()
+    {
+        selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
 
     }
+
+
 
     public void onDashInput(InputAction.CallbackContext context)
     {

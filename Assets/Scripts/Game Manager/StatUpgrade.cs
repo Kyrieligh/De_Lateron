@@ -18,7 +18,6 @@ public class StatUpgrade : MonoBehaviour
     [SerializeField] private int damageCost = 20;
 
     [Header("UI Poin")]
-    [SerializeField] private TMP_Text currentPoint;
     [SerializeField] private TMP_Text pointText;
 
     [Header("Upgrade Button")]
@@ -32,7 +31,7 @@ public class StatUpgrade : MonoBehaviour
     [Header("Player Reference")]
     [SerializeField] private Player playerStat;
 
-    private ScoreManager poinScore;
+    //private ScoreManager poinScore;
     public GameObject displayUpgradeStat;
     private Button buttonComponent;
     private int currentCost;
@@ -105,6 +104,7 @@ public class StatUpgrade : MonoBehaviour
         {
             ScoreManager.instance.UpdatePoint(-speedCost);
             playerStat.MoveSpeed += speedUpgradeAmount;
+            UpdateCurrentPointUI();
         }
     }
 
@@ -125,13 +125,6 @@ public class StatUpgrade : MonoBehaviour
 
     }
 
-    private void UpdatePointUI()
-    {
-        if (pointText != null)
-        {
-            pointText.text = "Point : " + currentCost;
-        }
-    }
 
     public void TriggerUpdateStat()
     {
