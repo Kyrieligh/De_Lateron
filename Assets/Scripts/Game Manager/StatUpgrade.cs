@@ -31,6 +31,9 @@ public class StatUpgrade : MonoBehaviour
     [Header("Player Reference")]
     [SerializeField] private Player playerStat;
 
+    [Header("Enemy Spawn Reference")]
+    [SerializeField] private EnemySpawner enemySpawner;
+
     //private ScoreManager poinScore;
     public GameObject displayUpgradeStat;
     private Button buttonComponent;
@@ -138,6 +141,10 @@ public class StatUpgrade : MonoBehaviour
         isUpgradeStatOpen = false;
         if (displayUpgradeStat != null) displayUpgradeStat.SetActive(false);
         Time.timeScale = 1f;
+        if (enemySpawner != null)
+        {
+            enemySpawner.NextLevel();
+        }
         if (gameTimer != null)
         {
             gameTimer.ResetTimer();

@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField]
-    private float spawnInterval = 3.5f;
+    [SerializeField] private float spawnInterval = 3.5f;
+    [SerializeField] private float minSpawnInterval = 0.5f;
+    [SerializeField] private float intervalDecreaseRate = 0.5f;
 
     [Header("Enemy List")]
+    [SerializeField] private GameObject[] unlockAbleEnemies;
     public List<GameObject> EnemyRespawn = new List<GameObject>();
+
+    private float currentInterval;
+    private int currentLevel;
+
 
     void Start()
     {
@@ -38,5 +44,22 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void NextLevel()
+    {
+        currentLevel++;
+
+        //Mathf.Max jauh lebih efisien dan ringkas daripada Mathf.Clamp untuk kasus ini
+        //karena Anda hanya perlu membatasi satu sisi saja (batas bawah/minimum).
+        currentInterval = Mathf.Max(minSpawnInterval, currentInterval - intervalDecreaseRate);
+
+        int enemyIndexToUnlock = currentLevel - 1;
+        if (enemyIndexToUnlock < unlockAbleEnemies.Length)
+        {
+            EnemyRespawn.Add(unlockAbleEnemies[enemyIndexToUnlock]);
+            Debug.Log($"Level {currentLevel}: New Enemy unlock {unlockAbleEnemies[enemyIndexToUnlock].name}");
+        }
+
     }
 }

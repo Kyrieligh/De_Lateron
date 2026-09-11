@@ -19,10 +19,6 @@ public class EnemyBullet : Bullet
         transform.Translate(Vector3.right * (speed * Time.deltaTime));
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-    }
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Bullet Collision : " + collision.gameObject.name);

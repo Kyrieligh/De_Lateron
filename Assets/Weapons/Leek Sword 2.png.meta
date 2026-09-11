@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 9be54e685cc9d87429ddf022efb6de99
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5155318935017899846
+    second: Leek Sword 2_0
+  - first:
+      213: -7660377258077917498
+    second: Leek Sword 2_1
+  - first:
+      213: -241065473386357180
+    second: Leek Sword 2_2
+  - first:
+      213: -7475125726547266663
+    second: Leek Sword 2_3
+  - first:
+      213: 3491096175764822364
+    second: Leek Sword 2_4
+  - first:
+      213: -8737794777897026370
+    second: Leek Sword 2_5
+  - first:
+      213: -3525461467385863750
+    second: Leek Sword 2_6
+  - first:
+      213: 5146607310301186445
+    second: Leek Sword 2_7
+  - first:
+      213: 8523557278557691567
+    second: Leek Sword 2_8
+  - first:
+      213: 5682806430751528960
+    second: Leek Sword 2_9
+  - first:
+      213: 7128446349809957878
+    second: Leek Sword 2_10
+  - first:
+      213: 5634904769073416751
+    second: Leek Sword 2_11
+  - first:
+      213: -3442572002365331424
+    second: Leek Sword 2_12
+  - first:
+      213: 8170054021209913979
+    second: Leek Sword 2_13
+  - first:
+      213: -2683217721134626409
+    second: Leek Sword 2_14
+  - first:
+      213: 2476141531867367139
+    second: Leek Sword 2_15
+  - first:
+      213: -923865338056161796
+    second: Leek Sword 2_16
+  - first:
+      213: -7608049938385949867
+    second: Leek Sword 2_17
+  - first:
+      213: -2657246818760545766
+    second: Leek Sword 2_18
+  - first:
+      213: -561421304585338582
+    second: Leek Sword 2_19
+  - first:
+      213: 1591448605907785277
+    second: Leek Sword 2_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Leek Sword 2_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 287
+        width: 460
+        height: 543
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6474691e14f5b8740800000000000000
+      internalID: 5155318935017899846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leek Sword 2_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 300
+        width: 550
+        height: 604
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ed13baa3097acf0800000000000000
+      internalID: -241065473386357180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leek Sword 2_5
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 319
+        width: 554
+        height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc3f2fb1fd1db680800000000000000
+      internalID: -8737794777897026370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leek Sword 2_6
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 315
+        width: 524
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1632f597b031fc0800000000000000
+      internalID: -3525461467385863750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leek Sword 2_8
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 143
+        width: 525
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae50236f22c94670800000000000000
+      internalID: 8523557278557691567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3b2dca0c1b874614e9690d4ccbf43360
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Leek Sword 2_0: 5155318935017899846
+      Leek Sword 2_1: -7660377258077917498
+      Leek Sword 2_10: 7128446349809957878
+      Leek Sword 2_11: 5634904769073416751
+      Leek Sword 2_12: -3442572002365331424
+      Leek Sword 2_13: 8170054021209913979
+      Leek Sword 2_14: -2683217721134626409
+      Leek Sword 2_15: 2476141531867367139
+      Leek Sword 2_16: -923865338056161796
+      Leek Sword 2_17: -7608049938385949867
+      Leek Sword 2_18: -2657246818760545766
+      Leek Sword 2_19: -561421304585338582
+      Leek Sword 2_2: -241065473386357180
+      Leek Sword 2_20: 1591448605907785277
+      Leek Sword 2_21: -502562925
+      Leek Sword 2_3: -7475125726547266663
+      Leek Sword 2_4: 3491096175764822364
+      Leek Sword 2_5: -8737794777897026370
+      Leek Sword 2_6: -3525461467385863750
+      Leek Sword 2_7: 5146607310301186445
+      Leek Sword 2_8: 8523557278557691567
+      Leek Sword 2_9: 5682806430751528960
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

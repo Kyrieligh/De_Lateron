@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class AimWeapon : MonoBehaviour
+public class GooNWeapon : MonoBehaviour
 {
     public GameObject Bullet; //object bullet yang akan di spwan
     public Transform firePoint; //yang mana akan menjadi titik spawn bullet
@@ -13,7 +13,7 @@ public class AimWeapon : MonoBehaviour
     public int maxAmmo = 16;
     public int currentAmmo;
     public bool currentlyReloading = false;
-    public static AimWeapon instance;
+    public static GooNWeapon instance;
 
     private void Start()
     {
