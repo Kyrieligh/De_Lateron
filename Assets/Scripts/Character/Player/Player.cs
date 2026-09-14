@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor.ShaderGraph.Internal;
+using UnityEngine.Splines;
 
 public class Player : StatCharacter, IDamageable
 {
@@ -25,12 +26,19 @@ public class Player : StatCharacter, IDamageable
     [SerializeField] private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
-    [SerializeField] private TrailRenderer trailRenderer;
+    [Header("Weapon & Input Reference")]
+    [SerializeField] private InputActionReference pointerPositionAction;
+    private TrailRenderer trailRenderer;
+
+    private ParentWeapon weaponParent;
 
     public static Player Instance { get; private set; }
 
     private void Awake()
     {
+
+        weaponParent = GetComponentInChildren<ParentWeapon>();
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -70,8 +78,31 @@ public class Player : StatCharacter, IDamageable
         rb.linearVelocity = moveInput * moveSpeed;
         //weaponParent.PointerPosition = pointerInput;
         //pointerInput = GetPointerInput();
+
+        if (weaponParent != null)
+        {
+            weaponParent.PointerPosition = GetPointerInput();
+        }
+    }
+    private Vector2 GetPointerInput()
+    {
+        Vector2 screenPosition = pointerPositionAction.action.ReadValue<Vector2>();
+
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPosition);
+        Debug.Log("Mouse World Pos: " + worldPos);
+        return worldPos;
+
     }
 
+    private void OnEnable()
+    {
+        if (pointerPositionAction != null) pointerPositionAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        if (pointerPositionAction != null) pointerPositionAction.action.Disable();
+    }
 
     public void onDashInput(InputAction.CallbackContext context)
     {

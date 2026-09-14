@@ -1,9 +1,93 @@
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class WeaponDamageTests
 {
     "name": "TestWeaponDamage",
-    "optionalUnityReferences": [
-        "TestAssemblies"
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
     ],
     "includePlatforms": [
         "Editor"
+    ],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
     ]
+
+    private GameObject playerObject;
+    private Player player;
+    private GameObject sliderObject;
+    private Slider slider;
+
+    [SetUp]
+    public void SetUp()
+    {
+        // Setup dummy objek untuk Player dan Slider UI
+        playerObject = new GameObject("PlayerTest");
+        sliderObject = new GameObject("SliderTest");
+
+        slider = sliderObject.AddComponent<Slider>();
+        player = playerObject.AddComponent<Player>();
+        player.slider = slider;
+    }
+
+    [TearDown]
+    public void TearDown()
+    {
+        Object.DestroyImmediate(playerObject);
+        Object.DestroyImmediate(sliderObject);
+    }
+
+    [Test]
+    public void Player_TakeDamage_ReducesCurrentHealthCorrectly()
+    {
+        // Arrange
+        int initialHealth = 100;
+        player.CurrentHealth = initialHealth;
+        int damageFromLeek = 7; // Mengacu pada meleeDamage LeekWeapon
+
+        // Act
+        player.TakeDamage(damageFromLeek);
+
+        // Assert
+        Assert.AreEqual(initialHealth - damageFromLeek, player.CurrentHealth);
+        Assert.AreEqual(player.CurrentHealth, slider.value);
+    }
+
+    [Test]
+    public void IDamageable_CustomTarget_TakesCorrectDamageAmount()
+    {
+        // Arrange: Memastikan kontrak IDamageable bekerja independen dari Player
+        var mockEnemy = new MockDamageableTarget(50);
+        int damage = 7;
+
+        // Act
+        mockEnemy.TakeDamage(damage);
+
+        // Assert
+        Assert.AreEqual(43, mockEnemy.CurrentHealth);
+    }
+
+    // Helper dummy class untuk menguji kontrak IDamageable tanpa dependensi scene
+    private class MockDamageableTarget : IDamageable
+    {
+        public int CurrentHealth { get; private set; }
+
+        public MockDamageableTarget(int startingHealth)
+        {
+            CurrentHealth = startingHealth;
+        }
+
+        public void TakeDamage(int damageAmount)
+        {
+            CurrentHealth -= damageAmount;
+        }
+    }
 }

@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16595926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6207550023396243686, guid: 95913ad980ecadf44b2fa9e3e2140f60, type: 3}
+  m_PrefabInstance: {fileID: 4323979778813714734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &220957150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,6 +882,7 @@ MonoBehaviour:
   upgradeSpeed: {fileID: 1760788895}
   gameTimer: {fileID: 1979510196}
   playerStat: {fileID: 451224499}
+  enemySpawner: {fileID: 0}
   displayUpgradeStat: {fileID: 479940868}
 --- !u!224 &504941252 stripped
 RectTransform:
@@ -1141,7 +1147,7 @@ Transform:
   m_GameObject: {fileID: 536355875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.25189802, w: 0.9677538}
-  m_LocalPosition: {x: 0.639, y: 0.058, z: 0}
+  m_LocalPosition: {x: 0.426, y: -0.077, z: 0}
   m_LocalScale: {x: 0.15523668, y: 0.15523668, z: 0.15523668}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13494,9 +13500,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   spawnInterval: 3.5
+  minSpawnInterval: 0.5
+  intervalDecreaseRate: 0.5
+  unlockAbleEnemies:
+  - {fileID: 16595926}
   EnemyRespawn:
   - {fileID: 4944244131355058883, guid: ed259961961850a45956c8c07bfb688b, type: 3}
-  - {fileID: 3717205975758620629, guid: 56de24c297f25f84e810aa33e42dd960, type: 3}
 --- !u!4 &1936358492
 Transform:
   m_ObjectHideFlags: 0

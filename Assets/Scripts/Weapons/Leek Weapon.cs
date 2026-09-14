@@ -7,22 +7,24 @@ public class LeekWeapon : MonoBehaviour
     [SerializeField] private int meleeDamage = 7;
     [SerializeField] public float attackRadius = 0.3f;
     [SerializeField] private Animator animator;
-    private Vector2 pointerInput;
+    
 
+    [Header("Cooldown")]
     public float attackCooldown = 0.5f;
     private float nextAttackTime = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //if (animator == null) animator =  GetComponent<Animator>();
         animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        pointerInput = GetPointerInput();
-
+    
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextAttackTime)
         {
             MeleeAttack();
@@ -32,14 +34,21 @@ public class LeekWeapon : MonoBehaviour
 
     void MeleeAttack()
     {
+        //if (animator != null)
+        //{
+        //    animator.SetTrigger("triggerAttack");
+        //}
+
         animator.SetTrigger("triggerAttack");
+
+        Transform point = attackPoint != null ? attackPoint : transform;
         // Specify a radius for the OverlapCircleAll call (e.g., 0.5f)
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius);
-        foreach (Collider2D Collider in hitEnemies)
+        foreach (Collider2D enemyCollider in hitEnemies)
         {
-            if (Collider.gameObject.CompareTag("Player")) return;
+            if (enemyCollider.gameObject.CompareTag("Player")) return;
 
-            IDamageable enemy = Collider.gameObject.GetComponent<IDamageable>();
+            IDamageable enemy = enemyCollider.gameObject.GetComponent<IDamageable>();
             if (enemy != null)
             {
                 enemy.TakeDamage(meleeDamage);
@@ -47,10 +56,10 @@ public class LeekWeapon : MonoBehaviour
         }
     }
 
-    private Vector2 GetPointerInput()
+    private void OnDrawGizmosSelected()
     {
-        Vector3 mousePos = pointerPosition.action.ReadValue<Vector2>();
-        mousePos.z = Camera.main.nearClipPlane;
-        return Camera.main.ScreenToViewportPoint(mousePos);
+        Transform point = attackPoint != null ? attackPoint : transform;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(point.position, attackRadius);
     }
 }
