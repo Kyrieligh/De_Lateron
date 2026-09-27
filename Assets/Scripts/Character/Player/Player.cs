@@ -4,12 +4,11 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine.Splines;
 
 public class Player : StatCharacter, IDamageable
 {
-    public GameOver kockMati;
+    public ButtonClass kockMati;
     // im using "new" for i can modify this variable in StatUpgrade.cs otherwise its onlly update PLayer 
     //public new float moveSpeed = 6.9f; 
     //public new int maxHealth = 100;
@@ -28,7 +27,7 @@ public class Player : StatCharacter, IDamageable
 
     [Header("Weapon & Input Reference")]
     [SerializeField] private InputActionReference pointerPositionAction;
-    private TrailRenderer trailRenderer;
+    [SerializeField] private TrailRenderer trailRenderer;
 
     private ParentWeapon weaponParent;
 
@@ -89,7 +88,7 @@ public class Player : StatCharacter, IDamageable
         Vector2 screenPosition = pointerPositionAction.action.ReadValue<Vector2>();
 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPosition);
-        Debug.Log("Mouse World Pos: " + worldPos);
+        //Debug.Log("Mouse World Pos: " + worldPos);
         return worldPos;
 
     }
@@ -196,6 +195,10 @@ public class Player : StatCharacter, IDamageable
         Debug.Log("ittai yooooo");
         CurrentHealth -= damageAmount;
         slider.value = CurrentHealth;
+        if (slider != null)
+        {
+            slider.value = CurrentHealth;
+        }
         if (CurrentHealth <= 0)
         {
             die();

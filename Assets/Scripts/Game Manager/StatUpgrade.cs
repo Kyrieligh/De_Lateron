@@ -149,6 +149,7 @@ public class StatUpgrade : MonoBehaviour
         {
             gameTimer.ResetTimer();
         }
-        
     }
+
+    
 }

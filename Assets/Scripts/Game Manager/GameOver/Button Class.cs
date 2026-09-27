@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class ButtonClass : MonoBehaviour
 {
     public GameObject gameOverScreen;
+    [SerializeField] private GameObject UpgradeUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,5 +31,14 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);// why this code isn't long ? cause we know we will back to load scene first scene mean scene 0
+    }
+
+    public void ContinueButton()
+    {
+        Time.timeScale = 1f;
+        if (UpgradeUI != null)
+        {
+            UpgradeUI.SetActive(false);
+        }
     }
 }
