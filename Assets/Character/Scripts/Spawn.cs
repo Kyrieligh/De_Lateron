@@ -12,6 +12,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] unlockAbleEnemies;
     public List<GameObject> EnemyRespawn = new List<GameObject>();
 
+    [Header("Boss Settings")]
+    [SerializeField] private GameObject bossPrefab;
+
     private float currentInterval;
     private int currentLevel;
 
@@ -53,6 +56,10 @@ public class EnemySpawner : MonoBehaviour
         //Mathf.Max jauh lebih efisien dan ringkas daripada Mathf.Clamp untuk kasus ini
         //karena Anda hanya perlu membatasi satu sisi saja (batas bawah/minimum).
         currentInterval = Mathf.Max(minSpawnInterval, currentInterval - intervalDecreaseRate);
+        if (currentLevel % 5 == 0 && bossPrefab != null)
+        {
+            BossSpawn();
+        }
 
         int enemyIndexToUnlock = currentLevel - 1;
         if (enemyIndexToUnlock < unlockAbleEnemies.Length)
@@ -60,6 +67,12 @@ public class EnemySpawner : MonoBehaviour
             EnemyRespawn.Add(unlockAbleEnemies[enemyIndexToUnlock]);
             Debug.Log($"Level {currentLevel}: New Enemy unlock {unlockAbleEnemies[enemyIndexToUnlock].name}");
         }
+    }
 
+    private void BossSpawn()
+    {
+        Vector3 spawbPosition = new Vector3(0f, 2f, 0f);
+        Instantiate(bossPrefab, spawbPosition,Quaternion.identity);//instantiate used for clone
+        Debug.Log($"{currentLevel} : boss has been spawned");
     }
 }
