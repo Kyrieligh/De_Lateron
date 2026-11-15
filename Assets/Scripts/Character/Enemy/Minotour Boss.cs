@@ -11,6 +11,21 @@ public class MinotourBoss : Enemy
     private float pathUpdateTimer = 0.5f; // Re-pathing setiap 0.5 detik
     private float nextDamageTime;
 
+    private void Start()
+    {
+        if (target == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                target = playerObj.transform;
+        }
+
+        if (pathfinding == null)
+        {
+            pathfinding = FindAnyObjectByType<GridPathfinding>();
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

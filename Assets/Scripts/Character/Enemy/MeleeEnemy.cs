@@ -4,6 +4,16 @@ public class MeleeEnemy : Enemy
 {
     private float nextDamageTime;
 
+    protected virtual void Start()
+    {
+        if (target == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                target = playerObj.transform;
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         // Cek apakah yang ditabrak adalah Player

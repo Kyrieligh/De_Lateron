@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Boss Settings")]
     [SerializeField] private GameObject bossPrefab;
+    private bool pendingBossSpawn = false;
     private GameObject activeBoss;
 
     [Header("Arena Spawn Bounds")]
@@ -22,12 +23,14 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;                  // Layer Wall & Object
     [SerializeField] private float checkRadius = 0.5f;                 // Radius aman dari tembok
 
+
     private float currentInterval;
     private int currentLevel;
 
     void Start()
     {
         currentInterval = spawnInterval;
+        NextLevel();
         StartCoroutine(SpawnEnemyRoutine());
     }
 
@@ -37,17 +40,20 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(currentInterval);
 
+            // if boss is failed to spawn, try again next interval
+            if (pendingBossSpawn && activeBoss == null)
+            {
+                BossSpawn();
+            }
+
             if (EnemyRespawn.Count > 0)
             {
                 int randomIndex = Random.Range(0, EnemyRespawn.Count);
                 GameObject selectedEnemy = EnemyRespawn[randomIndex];
 
-                if (selectedEnemy != null)
+                if (selectedEnemy != null && TryGetValidSpawnPosition(out Vector3 spawnPosition))
                 {
-                    if (TryGetValidSpawnPosition(out Vector3 spawnPosition))
-                    {
-                        Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
-                    }
+                    Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
                 }
             }
         }
@@ -78,14 +84,16 @@ public class EnemySpawner : MonoBehaviour
     {
         currentLevel++;
         currentInterval = Mathf.Max(minSpawnInterval, currentInterval - intervalDecreaseRate);
+        Debug.Log($"Spawner naik ke Level: {currentLevel}");
 
-        if (currentLevel % 1 == 0 && bossPrefab != null && activeBoss == null)
+        if (currentLevel % 3 == 0 && activeBoss == null)
         {
+            pendingBossSpawn = true;
             BossSpawn();
         }
 
         int enemyIndexToUnlock = currentLevel - 1;
-        if (enemyIndexToUnlock < unlockAbleEnemies.Length)
+        if (enemyIndexToUnlock < unlockAbleEnemies.Length && unlockAbleEnemies[enemyIndexToUnlock] != null)
         {
             EnemyRespawn.Add(unlockAbleEnemies[enemyIndexToUnlock]);
             Debug.Log($"Level {currentLevel}: New Enemy unlock {unlockAbleEnemies[enemyIndexToUnlock].name}");
@@ -94,16 +102,24 @@ public class EnemySpawner : MonoBehaviour
 
     private void BossSpawn()
     {
+        if (bossPrefab == null)
+        {
+            Debug.LogWarning("Boss gagal spawn: Boss Prefab di Inspector masih kosong (None)!");
+            pendingBossSpawn = false;
+            return;
+        }
+
         if (TryGetValidSpawnPosition(out Vector3 spawnPosition))
         {
-            // Simpan ke activeBoss agar tidak spawn ganda
             activeBoss = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-            Debug.Log($"{currentLevel} : boss has been spawned at {spawnPosition}");
+            activeBoss.SetActive(true); // Memastikan objek boss aktif saat di-spawn
+            pendingBossSpawn = false;
+            Debug.Log($"Level {currentLevel} : boss has been spawned at {spawnPosition}");
         }
     }
 
-    // Menampilkan kotak hijau di Scene View untuk memudahkan pengaturan batas arena
-    private void OnDrawGizmosSelected()
+// Menampilkan kotak hijau di Scene View untuk memudahkan pengaturan batas arena
+private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Vector3 center = new Vector3((arenaMin.x + arenaMax.x) / 2f, (arenaMin.y + arenaMax.y) / 2f, 0f);

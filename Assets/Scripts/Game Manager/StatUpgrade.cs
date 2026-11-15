@@ -42,10 +42,14 @@ public class StatUpgrade : MonoBehaviour
     
     void Awake()
     {
-       if (playerStat == null)
-        {
+        if (playerStat == null)
             playerStat = FindAnyObjectByType<Player>();
-        }
+
+        if (enemySpawner == null)
+            enemySpawner = FindAnyObjectByType<EnemySpawner>();
+
+        if (gameTimer == null)
+            gameTimer = FindAnyObjectByType<Timer>();
     }
 
     private void Start()
@@ -144,11 +148,16 @@ public class StatUpgrade : MonoBehaviour
         isUpgradeStatOpen = false;
         if (displayUpgradeStat != null) displayUpgradeStat.SetActive(false);
         Time.timeScale = 1f;
+
         if (enemySpawner != null)
         {
             enemySpawner.NextLevel();
-            Debug.Log("New Enemy has spawned");
         }
+        else
+        {
+            Debug.LogWarning("EnemySpawner masih kosong (None) di Inspector StatUpgrade!");
+        }
+
         if (gameTimer != null)
         {
             gameTimer.ResetTimer();
