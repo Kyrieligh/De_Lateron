@@ -7,6 +7,7 @@ public class GridPathfinding : MonoBehaviour
     public GridCoordinateSystem2D grid;
     private ObstacleManager2D obstacleManager;
 
+
     private void Awake()
     {
         if (grid != null)
@@ -35,6 +36,11 @@ public class GridPathfinding : MonoBehaviour
     private List<Vector2> FindPathInternal(Vector2Int startGrid, Vector2Int endGrid)
     {
         if (!IsInBounds(startGrid) || !IsInBounds(endGrid)) return null;
+
+        if (obstacleManager != null && obstacleManager.IsObstacle(startGrid))
+        {
+            startGrid = FindNearestNonObstacle(startGrid);
+        }
 
         // If the endGrid is an obstacle, find the nearest non-obstacle position
         if (obstacleManager != null && obstacleManager.IsObstacle(endGrid))
@@ -67,7 +73,7 @@ public class GridPathfinding : MonoBehaviour
             openSet.Remove(currentNode);
             closedSet.Add(currentNode.GridPosition);
 
-            foreach (Vector2Int offset in GetNeighbours())
+            foreach (Vector2Int offset in GetNeighbours(currentNode.GridPosition))
             {
                 Vector2Int neighborGrid = currentNode.GridPosition + offset;
                 if (closedSet.Contains(neighborGrid) || !IsInBounds(neighborGrid)) continue;
@@ -113,19 +119,40 @@ public class GridPathfinding : MonoBehaviour
         return best;
     }
 
-    private List<Vector2Int> GetNeighbours()
+    private List<Vector2Int> GetNeighbours(Vector2Int currentPos)
     {
-        return new List<Vector2Int>
+        List<Vector2Int> neighbours = new List<Vector2Int>();
+
+        Vector2Int[] straightDirs = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
+        foreach (var dir in straightDirs)
         {
-            Vector2Int.up,
-            Vector2Int.down,
-            Vector2Int.left,
-            Vector2Int.right,
-            new Vector2Int(1, 1),
-            new Vector2Int(-1, 1),
-            new Vector2Int(1, -1),
-            new Vector2Int(-1, -1)
-        };
+            neighbours.Add(dir);
+        }
+
+        // Diagonal hanya diizinkan jika kedua sel lurus di sampingnya tidak terhalang tembok/tabung
+        Vector2Int[] diagonalDirs =
+        {
+        new Vector2Int(1, 1),
+        new Vector2Int(-1, 1),
+        new Vector2Int(1, -1),
+        new Vector2Int(-1, -1)
+    };
+
+        foreach (var diag in diagonalDirs)
+        {
+            Vector2Int checkHorizontal = currentPos + new Vector2Int(diag.x, 0);
+            Vector2Int checkVertical = currentPos + new Vector2Int(0, diag.y);
+
+            bool horizontalBlocked = obstacleManager != null && obstacleManager.IsObstacle(checkHorizontal);
+            bool verticalBlocked = obstacleManager != null && obstacleManager.IsObstacle(checkVertical);
+
+            if (!horizontalBlocked && !verticalBlocked)
+            {
+                neighbours.Add(diag);
+            }
+        }
+
+        return neighbours;
     }
 
     private List<Vector2> ReconstructPath(GridNode endNode)

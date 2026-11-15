@@ -1,48 +1,59 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 [ExecuteAlways]
 public class ObstacleManager2D : MonoBehaviour
 {
     private HashSet<Vector2Int> obstacles = new HashSet<Vector2Int>();
-    public Tilemap obstacleTilemap;
+    public LayerMask obstacleLayer; // Centang layer Wall dan Obstacle di Inspector
 
-    public void SetObstacle(Vector2Int position, bool isObstacle)
+    private GridCoordinateSystem2D grid;
+
+    private void Awake()
     {
-        if (isObstacle)
-        {
-            obstacles.Add(position);
-        }
-        else
-        {
-            obstacles.Remove(position);
-        }
+        grid = GetComponent<GridCoordinateSystem2D>();
     }
 
     private void Start()
     {
-        if (obstacleTilemap == null) return;
+        BakeObstaclesFromColliders();
+    }
 
-        // Otomatis mendaftarkan semua tile tembok ke sistem A*
-        foreach (var pos in obstacleTilemap.cellBounds.allPositionsWithin)
+    [SerializeField] private float obstaclePadding = 1.6f; // Perbesar jika badan boss masih menyenggol sudut pilar
+
+    [ContextMenu("Bake Obstacles")]
+    public void BakeObstaclesFromColliders()
+    {
+        if (grid == null) grid = GetComponent<GridCoordinateSystem2D>();
+        if (grid == null) return;
+
+        Physics2D.SyncTransforms();
+        obstacles.Clear();
+        Vector2 boxSize = Vector2.one * (grid.CellSize * obstaclePadding);
+
+        for (int x = 0; x < grid.subdivisions; x++)
         {
-            if (obstacleTilemap.HasTile(pos))
+            for (int y = 0; y < grid.subdivisions; y++)
             {
-                SetObstacle(new Vector2Int(pos.x, pos.y), true);
+                Vector2Int gridPos = new Vector2Int(x, y);
+                Vector2 worldPos = grid.GridToWorld(gridPos);
+
+                if (Physics2D.OverlapBox(worldPos, boxSize, 0f, obstacleLayer) != null)
+                {
+                    SetObstacle(gridPos, true);
+                }
             }
         }
     }
 
-    public bool IsObstacle(Vector2Int position)
+    public void SetObstacle(Vector2Int position, bool isObstacle)
     {
-        return obstacles.Contains(position);
+        if (isObstacle) obstacles.Add(position);
+        else obstacles.Remove(position);
     }
 
-    public IEnumerable<Vector2Int> GetAllObstacles()
-    {
-        return obstacles;
-    }
+    public bool IsObstacle(Vector2Int position) => obstacles.Contains(position);
+    public IEnumerable<Vector2Int> GetAllObstacles() => obstacles;
 
     public Vector2Int? FindNearestNonObstacle(Vector2Int targetGrid, int searchRadius, System.Func<Vector2Int, bool> isInBounds)
     {
@@ -60,7 +71,6 @@ public class ObstacleManager2D : MonoBehaviour
                 }
             }
         }
-
         return null;
     }
 }
