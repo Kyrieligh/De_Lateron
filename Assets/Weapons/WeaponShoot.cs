@@ -61,6 +61,7 @@ public class GooNWeapon : MonoBehaviour
         }
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletSpeed, ForceMode2D.Impulse);
+        Debug.Log("Jedooooor");
         Destroy(bullet, 3f);
     }
 
@@ -70,7 +71,7 @@ public class GooNWeapon : MonoBehaviour
         yield return new WaitForSeconds(1.7f);
         currentAmmo = maxAmmo;
         currentlyReloading = false;
-
+        Debug.Log("Press r to Reload");
         RefreshAmmoUI();
     }
 

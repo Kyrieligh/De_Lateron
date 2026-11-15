@@ -74,6 +74,7 @@ public class RangedEnemy : Enemy
         if (rb != null)
         {
             rb.linearVelocity = firePoint.right * bulletSpeed;
+            Debug.Log("ranged enemy has shooting");
         }
 
         Destroy(bullet, 2.1f);

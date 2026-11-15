@@ -32,6 +32,7 @@ public class Timer : MonoBehaviour
             remainingTime = 0;
             isTimeOut = true;
             TimeOut();
+            Debug.Log("Time is up! Buddy");
 
         }
 

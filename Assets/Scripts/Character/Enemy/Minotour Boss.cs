@@ -3,24 +3,21 @@ using UnityEngine;
 
 public class MinotourBoss : Enemy
 {
-    private List<PathNode> currentPath;
+    [Header("A* Pathfinding")]
+    public GridPathfinding pathfinding; // Referensi ke sistem A* di Tilemaps
+
+    private List<Vector2> currentPath;
     private int currentPathIndex;
-
-    private float pathUpdateTimer = 0.5f; // Hitung ulang rute setiap 0.5 detik agar tidak lag
-
+    private float pathUpdateTimer = 0.5f; // Re-pathing setiap 0.5 detik
     private float nextDamageTime;
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // Cek apakah yang ditabrak adalah Player
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Cek apakah sudah waktunya memberikan damage lagi
             if (Time.time >= nextDamageTime)
             {
-
                 IDamageable player = collision.gameObject.GetComponent<IDamageable>();
-                // Jika variabel 'player' belum diisi di Inspector, coba ambil 
                 if (player != null)
                 {
                     player.TakeDamage(AttackDamage);
@@ -44,18 +41,12 @@ public class MinotourBoss : Enemy
 
     private void RequestPathToPlayer()
     {
-        if (Player.Instance == null) return;
+        if (Player.Instance == null || pathfinding == null) return;
 
-        Vector3 playerPos = Player.Instance.transform.position;
-        Vector3 myPos = transform.position;
+        Vector2 playerPos = Player.Instance.transform.position;
+        Vector2 myPos = transform.position;
 
-        // Konversi koordinat dunia ke indeks grid integer
-        int startX = Mathf.FloorToInt(myPos.x);
-        int startY = Mathf.FloorToInt(myPos.y);
-        int targetX = Mathf.FloorToInt(playerPos.x);
-        int targetY = Mathf.FloorToInt(playerPos.y);
-
-        currentPath = Pathfinding.Instance.FindPath(startX, startY, targetX, targetY);
+        currentPath = pathfinding.FindPathWorld(myPos, playerPos);
         currentPathIndex = 0;
     }
 
@@ -64,17 +55,15 @@ public class MinotourBoss : Enemy
         if (currentPath == null || currentPath.Count == 0 || currentPathIndex >= currentPath.Count)
             return;
 
-        // Ambil titik tengah dari tile tujuan
-        Vector3 targetPosition = new Vector3(currentPath[currentPathIndex].x + 0.5f, currentPath[currentPathIndex].y + 0.5f, 0);
+        Vector3 targetPosition = currentPath[currentPathIndex];
 
         if (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            Vector3 moveDir = (targetPosition - transform.position).normalized;
-            transform.position += moveDir * moveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
         else
         {
-            currentPathIndex++; // Lanjut ke node berikutnya dalam rute
+            currentPathIndex++;
         }
     }
 }

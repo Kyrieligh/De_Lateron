@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [ExecuteAlways]
 public class ObstacleManager2D : MonoBehaviour
 {
     private HashSet<Vector2Int> obstacles = new HashSet<Vector2Int>();
+    public Tilemap obstacleTilemap;
 
     public void SetObstacle(Vector2Int position, bool isObstacle)
     {
@@ -15,6 +17,20 @@ public class ObstacleManager2D : MonoBehaviour
         else
         {
             obstacles.Remove(position);
+        }
+    }
+
+    private void Start()
+    {
+        if (obstacleTilemap == null) return;
+
+        // Otomatis mendaftarkan semua tile tembok ke sistem A*
+        foreach (var pos in obstacleTilemap.cellBounds.allPositionsWithin)
+        {
+            if (obstacleTilemap.HasTile(pos))
+            {
+                SetObstacle(new Vector2Int(pos.x, pos.y), true);
+            }
         }
     }
 

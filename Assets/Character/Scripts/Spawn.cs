@@ -14,13 +14,20 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Boss Settings")]
     [SerializeField] private GameObject bossPrefab;
+    private GameObject activeBoss;
+
+    [Header("Arena Spawn Bounds")]
+    [SerializeField] private Vector2 arenaMin = new Vector2(-4f, -3f); // Batas pojok kiri-bawah dalam arena
+    [SerializeField] private Vector2 arenaMax = new Vector2(4f, 3f);   // Batas pojok kanan-atas dalam arena
+    [SerializeField] private LayerMask obstacleLayer;                  // Layer Wall & Object
+    [SerializeField] private float checkRadius = 0.5f;                 // Radius aman dari tembok
 
     private float currentInterval;
     private int currentLevel;
 
-
     void Start()
     {
+        currentInterval = spawnInterval;
         StartCoroutine(SpawnEnemyRoutine());
     }
 
@@ -28,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnInterval);
+            yield return new WaitForSeconds(currentInterval);
 
             if (EnemyRespawn.Count > 0)
             {
@@ -37,26 +44,42 @@ public class EnemySpawner : MonoBehaviour
 
                 if (selectedEnemy != null)
                 {
-                    Vector3 spawnPosition = new Vector3(
-                        Random.Range(-5f, 5f),
-                        Random.Range(-6f, 6f),
-                        0f
-                    );
-
-                    Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
+                    if (TryGetValidSpawnPosition(out Vector3 spawnPosition))
+                    {
+                        Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
+                    }
                 }
             }
         }
     }
 
+    // Mencari titik acak di dalam arena yang tidak menabrak Wall atau pilar Object
+    private bool TryGetValidSpawnPosition(out Vector3 validPosition)
+    {
+        for (int i = 0; i < 15; i++) // Maksimal 15 kali percobaan cari titik kosong
+        {
+            float randomX = Random.Range(arenaMin.x, arenaMax.x);
+            float randomY = Random.Range(arenaMin.y, arenaMax.y);
+            Vector2 candidatePos = new Vector2(randomX, randomY);
+
+            // Jika titik ini tidak menyentuh collider Wall/Object, berarti aman untuk spawn
+            if (Physics2D.OverlapCircle(candidatePos, checkRadius, obstacleLayer) == null)
+            {
+                validPosition = new Vector3(candidatePos.x, candidatePos.y, 0f);
+                return true;
+            }
+        }
+
+        validPosition = Vector3.zero;
+        return false;
+    }
+
     public void NextLevel()
     {
         currentLevel++;
-
-        //Mathf.Max jauh lebih efisien dan ringkas daripada Mathf.Clamp untuk kasus ini
-        //karena Anda hanya perlu membatasi satu sisi saja (batas bawah/minimum).
         currentInterval = Mathf.Max(minSpawnInterval, currentInterval - intervalDecreaseRate);
-        if (currentLevel % 5 == 0 && bossPrefab != null)
+
+        if (currentLevel % 1 == 0 && bossPrefab != null && activeBoss == null)
         {
             BossSpawn();
         }
@@ -71,8 +94,20 @@ public class EnemySpawner : MonoBehaviour
 
     private void BossSpawn()
     {
-        Vector3 spawbPosition = new Vector3(0f, 2f, 0f);
-        Instantiate(bossPrefab, spawbPosition,Quaternion.identity);//instantiate used for clone
-        Debug.Log($"{currentLevel} : boss has been spawned");
+        if (TryGetValidSpawnPosition(out Vector3 spawnPosition))
+        {
+            // Simpan ke activeBoss agar tidak spawn ganda
+            activeBoss = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+            Debug.Log($"{currentLevel} : boss has been spawned at {spawnPosition}");
+        }
+    }
+
+    // Menampilkan kotak hijau di Scene View untuk memudahkan pengaturan batas arena
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Vector3 center = new Vector3((arenaMin.x + arenaMax.x) / 2f, (arenaMin.y + arenaMax.y) / 2f, 0f);
+        Vector3 size = new Vector3(arenaMax.x - arenaMin.x, arenaMax.y - arenaMin.y, 0f);
+        Gizmos.DrawWireCube(center, size);
     }
 }

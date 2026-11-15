@@ -84,6 +84,7 @@ public class StatUpgrade : MonoBehaviour
             ScoreManager.instance.UpdatePoint(-healthCost);
             playerStat.MaxHealth += maxHealtUpgradeAmount;
             UpdateCurrentPointUI();
+            Debug.Log("Health Upgrade Purchased");
         }
     }
 
@@ -96,6 +97,7 @@ public class StatUpgrade : MonoBehaviour
             ScoreManager.instance.UpdatePoint(-damageCost);
             playerStat.AttackDamage += damageUpgradeAmount;
             UpdateCurrentPointUI();
+            Debug.Log("Damage Upgrade Purchased");
         }
     }
 
@@ -108,6 +110,7 @@ public class StatUpgrade : MonoBehaviour
             ScoreManager.instance.UpdatePoint(-speedCost);
             playerStat.MoveSpeed += speedUpgradeAmount;
             UpdateCurrentPointUI();
+            Debug.Log("IshowSpeed Upgrade Purchased");
         }
     }
 
@@ -144,6 +147,7 @@ public class StatUpgrade : MonoBehaviour
         if (enemySpawner != null)
         {
             enemySpawner.NextLevel();
+            Debug.Log("New Enemy has spawned");
         }
         if (gameTimer != null)
         {

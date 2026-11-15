@@ -53,13 +53,14 @@ public class Enemy : StatCharacter, IDamageable
             float chance = Random.Range(0f, 100f); 
             if ( chance <= item.dropChance)
             {
-
                 InstantiateItem(item.itemPrefab);
+                Debug.Log("item has Dropped");
             }
             //break;
         }
 
         Destroy(gameObject);
+        Debug.Log("Enemy has been destroyed");
     }
 
     void InstantiateItem(GameObject loot)

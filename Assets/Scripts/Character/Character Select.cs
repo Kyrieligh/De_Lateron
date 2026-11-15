@@ -14,5 +14,6 @@ public class Character_Select: MonoBehaviour
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene(2);
+        Debug.Log($"Selected Character button clicked {selectedCharacter}");
     }
 }

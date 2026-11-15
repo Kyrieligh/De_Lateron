@@ -9,16 +9,16 @@ public class MeleeEnemy : Enemy
         // Cek apakah yang ditabrak adalah Player
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Cek apakah sudah waktunya memberikan damage lagi
+            // interval serangan
             if (Time.time >= nextDamageTime)
             {
 
                 IDamageable player = collision.gameObject.GetComponent<IDamageable>();
-                // Jika variabel 'player' belum diisi di Inspector, coba ambil 
                 if (player != null)
                 {
                     player.TakeDamage(AttackDamage);
                     nextDamageTime = Time.time + damageInterval;
+                    Debug.Log("MeleeEnemy menyerang Player dengan damage: " + AttackDamage);
                 }
             }
         }

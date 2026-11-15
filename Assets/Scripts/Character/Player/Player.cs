@@ -108,6 +108,7 @@ public class Player : StatCharacter, IDamageable
         if (context.performed && canDash)
         {
             StartCoroutine(Dash());
+            Debug.Log("Dash Satset");
         }
     }
 
@@ -210,14 +211,16 @@ public class Player : StatCharacter, IDamageable
             kockMati.TriggerGameOver();
         
         Destroy(gameObject);
-        
+        Debug.Log("Lah Matod");
+
     }
 
     void Heal(int amount)
     {
         // Menggunakan property CurrentHealth otomatis dibatasi batas atas di class StatCharacter
         CurrentHealth += amount;
-        
+        Debug.Log("hillll");
+
         if (slider != null) slider.value = CurrentHealth;
     }
 
